@@ -1,12 +1,11 @@
 form {
   font-family: 'Futura', cursive;
-  width: 40%;
-  height: 5%;
+  width: 35%;
   margin: 0 auto;
   position: absolute;
-  top: 90%;
-  right: 40%;
-  z-index: 20;
+  top: 110%;
+  right: 35%;
+  z-index: 11;
   display: block;
   background-color: black;
   border-radius: 5px;
@@ -34,9 +33,19 @@ inputForm:-moz-placeholder { /* Firefox 18- */
 }
 
 @keyframes nameInput {
-  25% {bottom: 20%;}
-  35% {transform: rotate(10deg);}
-  50% {bottom: -8%;}
-  55% {transform: rotate(-10deg);}
-  100% {bottom: 3%;}
+  50% {top: 80%;}
+  100% {top: 88%;}
+}
+
+input {
+  background-color: black;
+  color: white;
+  border: none;
+  text-align: center;
+  font-size: 1.5em;
+  height: 100%;
+  width: 90%;
+  padding: 3% 3% 3% 3%;
+  outline: none;
+  border-radius: 5px;
 }
