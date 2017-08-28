@@ -58,7 +58,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Atom](http://atom.io) - The web framework used
+* [Atom](http://atom.io) - The text editor used, as required by Code Fellows
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
