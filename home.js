@@ -25,7 +25,8 @@ function selectGhost(event){
   };
   var inputElm = document.createElement('input');
   inputElm.setAttribute('class', 'inputClass');
-  inputElm.setAttribute('placeholder', 'Enter Your Name');
+  inputElm.setAttribute('placeholder', 'Type Your Name & Hit Enter');
+  inputElm.setAttribute('autocomplete', 'off');
   inputElm.setAttribute('type', 'text');
   inputElm.setAttribute('name', 'nameForm');
   var formElm = document.getElementById('inputForm');
