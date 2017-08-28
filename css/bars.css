@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  background: #aa00ff;
+  min-width: 900px;
+}
+
+.barOne {
+  position: fixed;
+  left: -300px;
+  top: -650px;
+  height: 6em;
+  width: 170%;
+  transform: rotate(40deg);
+  background: #aaff01;
+  animation: slide1 10s forwards;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+  animation-delay: 2s;
+}
+
+@keyframes slide1 {
+  from {top: -550px;}
+  to {top: 2000px;}
+}
+
+.barTwo {
+  position: fixed;
+  left: -300px;
+  top: -800px;
+  height: 2em;
+  width: 150%;
+  transform: rotate(320deg);
+  background: #ff00aa;
+  animation: slide2 15s forwards;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+  animation-delay: 2s;
+}
+
+@keyframes slide2 {
+  from {top: -600px;}
+  to {top: 2000px;}
+}
+
+.barThree {
+  position: fixed;
+  left: -300px;
+  top: -650px;
+  height: 4em;
+  width: 150%;
+  transform: rotate(320deg);
+  background: #ffaa01;
+  animation: slide3 7s forwards;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+  animation-delay: 1s;
+}
+
+@keyframes slide3 {
+  from {top: -550px;}
+  to {top: 2000px;}
+}
+
+.barFour {
+  position: fixed;
+  left: -300px;
+  bottom: -650px;
+  height: 3em;
+  width: 150%;
+  transform: rotate(40deg);
+  background: #ffaa01;
+  animation: slide4 13s forwards;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+  animation-delay: 7s;
+}
+
+@keyframes slide4 {
+  from {bottom: -550px;}
+  to {bottom: 2000px;}
+}
+
+.barFive {
+  position: fixed;
+  left: -300px;
+  bottom: -550px;
+  height: 2em;
+  width: 150%;
+  transform: rotate(180deg);
+  background: #aaff01;
+  animation: slide5 17s forwards;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+  animation-delay: 5s;
+}
+
+@keyframes slide5 {
+  from {bottom: -550px;}
+  to {bottom: 2000px;}
+}
+
+.barSix {
+  position: fixed;
+  left: -300px;
+  bottom: -550px;
+  height: 1em;
+  width: 150%;
+  transform: rotate(180deg);
+  background: #ff00aa;
+  animation: slide6 5s forwards;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+  animation-delay: 5s;
+}
+
+@keyframes slide6 {
+  from {bottom: 2000px;}
+  to {bottom: -550;}
+}
+
+.barSeven {
+  position: fixed;
+  left: -300px;
+  bottom: -900px;
+  height: 1em;
+  width: 150%;
+  transform: rotate(320deg);
+  background: #ffaa01;
+  animation: slide7 6s forwards;
+  animation-iteration-count: infinite;
+  opacity: 0.5;
+  animation-delay: 6s;
+}
+
+@keyframes slide7 {
+  from {bottom: -550px;}
+  to {bottom: 2000px;}
+}
