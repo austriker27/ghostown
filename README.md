@@ -68,11 +68,13 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [GitHub](http://www.github.com) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
 
 ## Authors & Contributors
 
-* **Shayne Reed Smith** - *Initial work* - [Shayne's GitHub](https://github.com/ShayneReedSmith)
+* **Shayne Reed Smith** - *Contributor* - [Shayne's GitHub](https://github.com/ShayneReedSmith)
+* **David A. Lindahl** - *Contributor* - [David's GitHub](https://github.com/austriker27)
+* **Max McFarland** - *Contributor* - [Max's GitHub](https://github.com/MaxMcF)
 
 ## License
 
