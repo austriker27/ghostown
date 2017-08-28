@@ -1,0 +1,21 @@
+.actionField {
+  top: 8%;
+  right: 23%;
+  position: absolute;
+  width: 700px;
+  height: 250px;
+  background: black;
+  opacity: 0.5;
+  border: 1px solid white;
+}
+
+.textField {
+  position: absolute;
+  top: 47%;
+  right: 23%;
+  width: 700px;
+  height: 325px;
+  background: black;
+  border: 1px solid black;
+  z-index: 1;
+}
