@@ -1,18 +1,20 @@
-function Character (name, str, agil, int, hp){
+function Character (name, str, agil, int, hp, ghostType){
   this.name = name;
   this.str = str;
   this.agil = agil;
   this.int = int;
   this.hp = hp;
-  this.totalLvl = (this.str + this.agil + this.int);
+  this.ghostType = 0;
+  this.totalLvl = 0;
 }
-var userChar = '';
+var userChar = [];
 for(var i = 0; i < document.getElementsByClassName('ghostPic').length; i++){
   var ghostie = document.getElementsByClassName('ghostPic')[i];
   ghostie.addEventListener('click', selectGhost);
 }
 function selectGhost(event){
-  var userChar = event.target.id;
+  userChar = [];
+  userChar.push(event.target.id);
   if(document.getElementsByClassName('chooseGhostie')[0]){
     var chooseText = document.getElementsByClassName('chooseGhostie')[0];
     var parentElm = chooseText.parentNode;
@@ -25,7 +27,7 @@ function selectGhost(event){
   };
   var inputElm = document.createElement('input');
   inputElm.setAttribute('class', 'inputClass');
-  inputElm.setAttribute('placeholder', 'Enter Your Name');
+  inputElm.setAttribute('placeholder', 'Enter Your Name & Hit Enter');
   inputElm.setAttribute('type', 'text');
   inputElm.setAttribute('name', 'nameForm');
   var formElm = document.getElementById('inputForm');
@@ -35,41 +37,34 @@ function selectGhost(event){
 
 function genStats(max, min, stat){
   var statCreate = Math.floor(Math.random() * (max - min) + min);
-  return stat;
+  return statCreate;
 }
 
 function startGame(event){
-  var userName = event.target.input;
-  var mainCharacter = new Character(userName, 0, 0, 0, 0);
-  if(userChar == 'ghostOne'){
-    var strGen = genStats(4, 3);
-    mainCharacter.str = strGen;
-    var intGen = genStats(2, 1);
-    mainCharacter.int = intGen;
-    var agilGen = genStats(6, 5);
-    mainCharacter.agil = agilGen;
-    var hpGen = genStats(11, 9);
-    mainCharacter.hp = hpGen;
-  }else if(userChar == 'ghostTwo'){
-    var strGen = genStats(2, 1);
-    mainCharacter.str = strGen;
-    var intGen = genStats(6, 5);
-    mainCharacter.int = intGen;
-    var agilGen = genStats(4, 3);
-    mainCharacter.agil = agilGen;
-    var hpGen = genStats(10, 8);
-    mainCharacter.hp = hpGen;
-  }else if(userChar == 'ghostThree'){
-    var strGen = genStats(8, 7);
-    mainCharacter.str = strGen;
-    var intGen = genStats(2, 1);
-    mainCharacter.int = intGen;
-    var agilGen = genStats(2, 1);
-    mainCharacter.agil = agilGen;
-    var hpGen = genStats(11, 9);
-    mainCharacter.hp = hpGen;
+  event.preventDefault();
+  var userName = event.target.nameForm.value;
+  var mainCharacter = new Character(userName, 0, 0, 0, 0, 0);
+  if(userChar[0] == 'ghostOne'){
+    mainCharacter.str = genStats(5, 3);
+    mainCharacter.int = genStats(3, 1);
+    mainCharacter.agil = genStats(7, 5);
+    mainCharacter.hp = genStats(12, 9);
+    mainCharacter.ghostType = 0;
+  }else if(userChar[0] == 'ghostTwo'){
+    mainCharacter.str = genStats(3, 1);
+    mainCharacter.int = genStats(7, 5);
+    mainCharacter.agil = genStats(5, 3);
+    mainCharacter.hp = genStats(11, 8);
+    mainCharacter.ghostType = 1;
+  }else if(userChar[0] == 'ghostThree'){
+    mainCharacter.str = genStats(9, 7);
+    mainCharacter.int = genStats(3, 1);
+    mainCharacter.agil = genStats(3, 1);
+    mainCharacter.hp = genStats(14, 11);
+    mainCharacter.ghostType = 2;
   }
+  mainCharacter.totalLvl = (mainCharacter.str + mainCharacter.int + mainCharacter.agil + mainCharacter.hp);
   console.log(mainCharacter.totalLvl);
   localStorage.setItem('character', JSON.stringify(mainCharacter));
-  window.location.replace(game.html);
+  window.open('game.html','_self');
 }
