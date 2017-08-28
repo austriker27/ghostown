@@ -1,9 +1,4 @@
 
-var userCharacter = JSON.parse(localStorage.character);
-console.log(userCharacter);
-var ghostNameDisplay = document.getElementsByTagName('h2')[0];
-ghostNameDisplay.innerText = userCharacter.name + ':';
-
 function fightCheck (charOne, charTwo, stat){
   if('str' == stat){
     var damage = (charOne.str - charTwo.str);
