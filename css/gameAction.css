@@ -1,21 +1,56 @@
-.actionField {
-  top: 8%;
-  right: 23%;
+.container {
   position: absolute;
+  margin: 0;
+  border: 1px solid white;
+  width: 700px;
+  min-width: 700px;
+  height: 575px;
+  min-height: 575;
+  z-index: 1;
+  top: 8%;
+  left: 20%;
+}
+
+.actionField {
+  width: 100%;
   width: 700px;
   height: 250px;
   background: black;
   opacity: 0.5;
-  border: 1px solid white;
 }
 
 .textField {
-  position: absolute;
-  top: 47%;
-  right: 23%;
-  width: 700px;
+  font-family: 'Special Elite', cursive;
+  width: 100%;
   height: 325px;
   background: black;
-  border: 1px solid black;
-  z-index: 1;
+  color: white;
+}
+
+h2 {
+  margin: 0;
+  padding-top: 0.2em;
+  padding-left: 0.5em;
+  border-bottom: 1px solid gray;
+}
+
+p {
+  padding-left: 1em;
+}
+
+li {
+  float: left;
+  padding: 0.5em;
+  list-style-type: none;
+}
+
+li:hover {
+  float: left;
+  border: 1px solid gray;
+  color: black;
+  background: white;
+}
+
+.break {
+  clear: both;
 }
