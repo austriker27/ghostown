@@ -36,10 +36,10 @@
   cursor: pointer;
 }
 
-.choseGhost {
+.chooseGhostie {
   position: absolute;
   top: 90%;
-  right: 40%;
+  right: 35%;
   font-size: 1.3em;
   color: white;
   font-family: 'Press Start 2P', cursive;
