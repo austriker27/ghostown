@@ -27,7 +27,7 @@ function selectGhost(event){
   };
   var inputElm = document.createElement('input');
   inputElm.setAttribute('class', 'inputClass');
-  inputElm.setAttribute('placeholder', 'Enter Your Name');
+  inputElm.setAttribute('placeholder', 'Enter Your Name & Hit Enter');
   inputElm.setAttribute('type', 'text');
   inputElm.setAttribute('name', 'nameForm');
   var formElm = document.getElementById('inputForm');
@@ -45,34 +45,22 @@ function startGame(event){
   var userName = event.target.nameForm.value;
   var mainCharacter = new Character(userName, 0, 0, 0, 0, 0);
   if(userChar[0] == 'ghostOne'){
-    var strGen = genStats(5, 3);
-    mainCharacter.str = strGen;
-    var intGen = genStats(3, 1);
-    mainCharacter.int = intGen;
-    var agilGen = genStats(7, 5);
-    mainCharacter.agil = agilGen;
-    var hpGen = genStats(12, 9);
-    mainCharacter.hp = hpGen;
+    mainCharacter.str = genStats(5, 3);
+    mainCharacter.int = genStats(3, 1);
+    mainCharacter.agil = genStats(7, 5);
+    mainCharacter.hp = genStats(12, 9);
     mainCharacter.ghostType = 0;
   }else if(userChar[0] == 'ghostTwo'){
-    var strGen = genStats(3, 1);
-    mainCharacter.str = strGen;
-    var intGen = genStats(7, 5);
-    mainCharacter.int = intGen;
-    var agilGen = genStats(5, 3);
-    mainCharacter.agil = agilGen;
-    var hpGen = genStats(11, 8);
-    mainCharacter.hp = hpGen;
+    mainCharacter.str = genStats(3, 1);
+    mainCharacter.int = genStats(7, 5);
+    mainCharacter.agil = genStats(5, 3);
+    mainCharacter.hp = genStats(11, 8);
     mainCharacter.ghostType = 1;
   }else if(userChar[0] == 'ghostThree'){
-    var strGen = genStats(9, 7);
-    mainCharacter.str = strGen;
-    var intGen = genStats(3, 1);
-    mainCharacter.int = intGen;
-    var agilGen = genStats(3, 1);
-    mainCharacter.agil = agilGen;
-    var hpGen = genStats(14, 11);
-    mainCharacter.hp = hpGen;
+    mainCharacter.str = genStats(9, 7);
+    mainCharacter.int = genStats(3, 1);
+    mainCharacter.agil = genStats(3, 1);
+    mainCharacter.hp = genStats(14, 11);
     mainCharacter.ghostType = 2;
   }
   mainCharacter.totalLvl = (mainCharacter.str + mainCharacter.int + mainCharacter.agil + mainCharacter.hp);
