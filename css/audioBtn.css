@@ -1,0 +1,9 @@
+#musicBtn {
+  z-index: 20;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: inherit;
+  color: inherit;
+  padding: 1% 1% 1% 1%;
+}

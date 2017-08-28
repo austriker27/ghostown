@@ -1,3 +1,8 @@
+function play(){
+  var audio = document.getElementById('audio');
+  audio.play();
+}
+
 function Character (name, str, agil, int, hp, ghostType){
   this.name = name;
   this.str = str;
