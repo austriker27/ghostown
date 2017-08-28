@@ -1,11 +1,11 @@
 form {
   font-family: 'Futura', cursive;
-  width: 40%;
-  height: 5%;
+  width: 35%;
+  height: 2em;
   margin: 0 auto;
   position: absolute;
-  top: 90%;
-  right: 40%;
+  top: 110%;
+  left: 30%;
   z-index: 20;
   display: block;
   background-color: black;
@@ -34,9 +34,6 @@ inputForm:-moz-placeholder { /* Firefox 18- */
 }
 
 @keyframes nameInput {
-  25% {bottom: 20%;}
-  35% {transform: rotate(10deg);}
-  50% {bottom: -8%;}
-  55% {transform: rotate(-10deg);}
-  100% {bottom: 3%;}
+  50% {top: 80%;}
+  100% {top: 90%;}
 }
