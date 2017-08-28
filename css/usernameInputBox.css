@@ -1,0 +1,42 @@
+form {
+  font-family: 'Futura', cursive;
+  width: 40%;
+  height: 5%;
+  margin: 0 auto;
+  position: absolute;
+  top: 90%;
+  right: 40%;
+  z-index: 20;
+  display: block;
+  background-color: black;
+  border-radius: 5px;
+  animation: nameInput 1.5s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+
+inputForm::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: white;
+  font-size: 1.3em;
+}
+inputForm::-moz-placeholder { /* Firefox 19+ */
+  color: white;
+  font-size: 1.3em;
+  opacity: 1;
+}
+inputForm:-ms-input-placeholder { /* IE 10+ */
+  color: white;
+  font-size: 1.3em;
+}
+inputForm:-moz-placeholder { /* Firefox 18- */
+  color: white;
+  font-size: 1.3em;
+}
+
+@keyframes nameInput {
+  25% {bottom: 20%;}
+  35% {transform: rotate(10deg);}
+  50% {bottom: -8%;}
+  55% {transform: rotate(-10deg);}
+  100% {bottom: 3%;}
+}
