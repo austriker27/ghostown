@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/navbar.css" type="text/css"/>
     <link rel="stylesheet" href="css/ghosts.css" type="text/css"/>
     <link rel="stylesheet" href="css/gameAction.css" type="text/css"/>
+    <link rel="stylesheet" href="css/audioBtn.css" type="text/css"/>
     <title>GhosTown</title>
     <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
@@ -15,6 +16,10 @@
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
   </head>
   <body>
+
+  <!-- background audio: button to pause play -->
+  <button id="pButton" class="play" onclick="playAudio()"></button>
+  <audio id="audio" src="music/8-bit-Arcade4-nosfx.mp3" loop></audio>
 
     <header class="navBar"><a class="about">About</a><a class="howTo">How To Play</a></header>
 
@@ -46,6 +51,8 @@
 
   </body>
   <script src="home.js" type="text/javascript" ></script>
+
+  <script src="audio.js" type="text/javascript" ></script>
   <script src='fightCheck.js' type='text/javascript' ></script>
   <script src='firstEncounter.js' type='text/javascript' ></script>
 </html>

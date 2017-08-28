@@ -1,0 +1,14 @@
+#pButton{
+	height:60px;
+	width: 60px;
+	border: none;
+	background-size: 50% 50%;
+	background-position: center;
+  position: absolute;
+  top: 6%;
+  left: 0.5%;
+  z-index: 11;
+}
+
+.pause{background: url('../assets/pause-circle.svg') no-repeat;}
+.play{background: url('../assets/play-circle.svg') no-repeat;}
