@@ -1,0 +1,26 @@
+.ghosTown {
+  right: 25%;
+  top: -30%;
+  position: fixed;
+  z-index: 10;
+  font-size: 10em;
+  font-family: 'Freckle Face', cursive;
+  text-shadow: 1px 1px black,
+              2px 2px black,
+              3px 3px black,
+              4px 4px #aaff01,
+              5px 5px #aaff01,
+              6px 6px #aaff01;
+  color: #0af;
+  animation: title 1.5s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+
+@keyframes title {
+  25% {top: 20%;}
+  35% {transform: rotate(10deg);}
+  50% {top: -8%;}
+  55% {transform: rotate(-10deg);}
+  100% {top: 3%;}
+}

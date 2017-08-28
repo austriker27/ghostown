@@ -1,0 +1,64 @@
+.navBar {
+  top: -30%;
+  padding-top: 2em;
+  position: fixed;
+  font-size: 2em;
+  font-family: 'Didact Gothic', sans-serif;
+  width: 100%;
+  background: black;
+  color: #f0a;
+  z-index: 2;
+  animation: navbar 0.5s forwards;
+  border-bottom: 2px solid #272727;
+}
+
+@keyframes navbar {
+  50% {top: -9%;}
+  100% {top: -11%;}
+}
+
+.about {
+  padding-left: 1em;
+}
+
+.about:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.howTo {
+  float: right;
+  padding-right: 1em;
+}
+
+.howTo:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.choseGhost {
+  position: absolute;
+  top: 90%;
+  right: 40%;
+  font-size: 1.3em;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  z-index: 10;
+  animation: sel 2s forwards;
+  animation-delay: 5s;
+  opacity: 0;
+  text-shadow: 2px 2px black,
+              2px -2px black,
+              -2px 2px black,
+              -2px -2px black;
+}
+
+@keyframes sel {
+  20% {color: #aaff01;}
+  40% {color: #ffaa01;}
+  60% {color: #ff00aa;}
+  80% {color: #aa00ff;}
+  98% {color: #00aaff;}
+  99% {color: white;}
+  100% {opacity: 1;}
+}

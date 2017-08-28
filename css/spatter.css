@@ -1,0 +1,51 @@
+.spatter1 {
+  position: absolute;
+  right: 26%;
+  animation: spatter1 44s none;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+  z-index: 2;
+}
+
+@keyframes spatter1 {
+  100% {transform: rotate(360deg);}
+}
+
+.spatter2 {
+  position: absolute;
+  right: 25%;
+  animation: spatter2 46s none;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+  z-index: 2;
+}
+
+@keyframes spatter2 {
+  100% {transform: rotate(-360deg);}
+}
+
+.spatter3 {
+  position: absolute;
+  right: 25%;
+  animation: spatter3 48s none;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+  z-index: 2;
+}
+
+@keyframes spatter3 {
+  100% {transform: rotate(360deg);}
+}
+
+.spatter4 {
+  position: absolute;
+  right: 25%;
+  animation: spatter4 50s none;
+  animation-timing-function:linear;
+  animation-iteration-count: infinite;
+  z-index: 0;
+}
+
+@keyframes spatter4 {
+  100% {transform: rotate(-360deg);}
+}
