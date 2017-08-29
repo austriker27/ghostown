@@ -1,4 +1,4 @@
-form {
+#formBoxTransition {
   width: 35%;
   margin: 0 auto;
   position: absolute;
@@ -8,8 +8,9 @@ form {
   display: block;
   background-color: black;
   border-radius: 5px;
-  animation: nameInput 1.5s forwards;
+  animation: nameInput 1s forwards;
   animation-iteration-count: 1;
+  animation-delay: .0s;
   font-family: 'Special Elite', cursive;
 }
 
