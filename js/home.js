@@ -7,14 +7,13 @@ function Character (name, str, agil, int, hp, ghostType){
   this.ghostType = 0;
   this.totalLvl = 0;
 }
-var userChar = [];
+var userChar = null;
 for(var i = 0; i < document.getElementsByClassName('ghostPic').length; i++){
   var ghostie = document.getElementsByClassName('ghostPic')[i];
   ghostie.addEventListener('click', selectGhost);
 }
 function selectGhost(event){
-  userChar = [];
-  userChar.push(event.target.id);
+  userChar = event.target.id;
   if(document.getElementsByClassName('chooseGhostie')[0]){
     var chooseText = document.getElementsByClassName('chooseGhostie')[0];
     var parentElm = chooseText.parentNode;
@@ -31,8 +30,8 @@ function selectGhost(event){
   inputElm.setAttribute('autocomplete', 'off');
   inputElm.setAttribute('type', 'text');
   inputElm.setAttribute('name', 'nameForm');
-  var formElm = document.getElementById('inputForm');
-  formElm.setAttribute('id', 'formBoxTransition');
+  var formElm = document.getElementById('formBoxTransition');
+  // formElm.setAttribute('id', 'formBoxTransition');
   formElm.appendChild(inputElm);
   formElm.addEventListener('submit', startGame);
 }
@@ -46,19 +45,19 @@ function startGame(event){
   event.preventDefault();
   var userName = event.target.nameForm.value;
   var mainCharacter = new Character(userName, 0, 0, 0, 0, 0);
-  if(userChar[0] == 'ghostOne'){
+  if(userChar == 'ghostOne'){
     mainCharacter.str = genStats(5, 3);
     mainCharacter.int = genStats(3, 1);
     mainCharacter.agil = genStats(7, 5);
     mainCharacter.hp = genStats(12, 9);
     mainCharacter.ghostType = 0;
-  }else if(userChar[0] == 'ghostTwo'){
+  }else if(userChar == 'ghostTwo'){
     mainCharacter.str = genStats(3, 1);
     mainCharacter.int = genStats(7, 5);
     mainCharacter.agil = genStats(5, 3);
     mainCharacter.hp = genStats(11, 8);
     mainCharacter.ghostType = 1;
-  }else if(userChar[0] == 'ghostThree'){
+  }else if(userChar == 'ghostThree'){
     mainCharacter.str = genStats(9, 7);
     mainCharacter.int = genStats(3, 1);
     mainCharacter.agil = genStats(3, 1);
