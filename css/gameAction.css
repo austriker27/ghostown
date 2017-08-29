@@ -77,3 +77,24 @@ li:hover {
 .break {
   clear: both;
 }
+
+.gameOver {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 8em;
+  font-family: 'Freckle Face', cursive;
+  color: #ff00aa;
+}
+
+.gameOver:hover {
+  cursor: pointer;
+  color: #ffaa01;
+  font-size: 8.5em;
+  text-shadow: 1px 1px #00aaff,
+              2px 2px #00aaff,
+              3px 3px #00aaff,
+              4px 4px #aaff01,
+              5px 5px #aaff01,
+              6px 6px #aaff01;
+}
