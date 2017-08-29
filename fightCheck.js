@@ -8,6 +8,25 @@ function Character (name, str, agil, int, hp, ghostType){
   this.totalLvl = 0;
 }
 questionCounter = 0;
+
+function damageDisplay(display){
+  var textField = document.getElementsByClassName('textField')[0];
+  while (textField.hasChildNodes()) {
+    textField.removeChild(textField.lastChild);
+  };
+  var speakingField = document.createElement('h2');
+  textField.appendChild(speakingField);
+  var promptField = document.createElement('p');
+  promptField.innerText = display;
+  textField.appendChild(promptField);
+  var unList = document.createElement('ul');
+  textField.appendChild(unList);
+  var choiceOne = document.createElement('li');
+  choiceOne.innerText = 'Continue';
+  choiceOne.setAttribute('id', 'strChoice');
+  textField.appendChild(choiceOne);
+  choiceOne.addEventListener('click', changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]));
+}
 function fightCheck (charOne, charTwo, stat){
   if('str' == stat){
     var damage = (charOne.str - charTwo.str);
@@ -20,6 +39,9 @@ function fightCheck (charOne, charTwo, stat){
     }else {
       charOne.hp += damage;
       var display = 'Oh no, ' + charTwo.name + ' has a higher ' + stat + ' level! ' + charOne.name + ' took ' + (-1 * damage) + ' points of damage.';
+      damageDisplay(display);
+      setTimeout(function(){
+        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);}, 2000);
     }
   }
   if(stat == 'agil'){
@@ -83,24 +105,7 @@ function deathDisplay(display){
   textField.appendChild(choiceOne);
   choiceOne.addEventListener('click', continueToQuestion);
 }
-function damageDisplay(display){
-  var textField = document.getElementsByClassName('textField')[0];
-  while (textField.hasChildNodes()) {
-    textField.removeChild(textField.lastChild);
-  };
-  var speakingField = document.createElement('h2');
-  textField.appendChild(speakingField);
-  var promptField = document.createElement('p');
-  promptField.innerText = display;
-  textField.appendChild(promptField);
-  var unList = document.createElement('ul');
-  textField.appendChild(unList);
-  var choiceOne = document.createElement('li');
-  choiceOne.innerText = 'Continue';
-  choiceOne.setAttribute('id', 'strChoice');
-  textField.appendChild(choiceOne);
-  choiceOne.addEventListener('click', changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]));
-}
+
 function continueToQuestion(){
   clearTimeout();
   questionCounter += 1;
