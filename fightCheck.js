@@ -1,3 +1,4 @@
+
 function Character (name, str, agil, int, hp, ghostType){
   this.name = name;
   this.str = str;
@@ -31,17 +32,14 @@ function damageRedisplayQuestion(event){
   clearTimeout();
   changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
 }
+
 function fightCheck (charOne, charTwo, stat){
   if('str' == stat){
     var damage = charOne.str - charTwo.str;
     if (damage > -1){
       charTwo.hp -= damage;
       var display = charTwo.name + ' took ' + damage + ' points of damage.';
-      damageDisplay(display);
-      setTimeout(function(){
-        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
-      }, 4000);
-    } else {
+    }else {
       charOne.hp += damage;
       var display = 'Oh no, ' + charTwo.name + ' has a higher ' + stat + ' level! ' + charOne.name + ' took ' + (-1 * damage) + ' points of damage.';
       damageDisplay(display);
@@ -76,23 +74,15 @@ function fightCheck (charOne, charTwo, stat){
 }
 
 // Need global user name to display user death
-function deathCheck(charOne, charTwo){
-  if (charTwo.hp <= 0 && userCharacter.hp > 0){
-    var display = charTwo.name + ' soul is at rest. R.I.P';
-    deathDisplay(display);
-    setTimeout(function(){
-      questionCounter += 1;
-      changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);}, 4000);
-  }
-  else if (charOne.hp <= 0 && userCharacter.hp > 0){
-    var display = charTwo.name + ' soul is at rest. R.I.P';
-    deathDisplay(display);
-  }else if (userCharacter <= 0 ){
-    var display = 'Oh no, ' + userCharacter.name + ' died.... Better luck next time!';
-    deathDisplay(display);
-  }
+// function deathCheck(charOne, charTwo){
+//   if (charTwo.hp <= 0){
+//     var display = charTwo.name + ' soul is at rest. R.I.P';
+//   }
+//   if (charOne.hp <= 0){
+//     var display = 'Oh No! You perished. Your soul moves on to a better realm.';
+//   }
+// }
 
-}
 function deathDisplay(display){
   var textField = document.getElementsByClassName('textField')[0];
   while (textField.hasChildNodes()) {
@@ -117,6 +107,7 @@ function continueToQuestion(){
   questionCounter += 1;
   changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
 }
+
 // var Max = new Character('Max', 3, 3, 3, 3);
 // var Enemy = new Character('Blarg', 2, 4, 3, 5);
 // fightCheck(Max, Enemy, 'agil');
