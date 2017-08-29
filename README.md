@@ -87,7 +87,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Entry Boss Music - *Fashion* - [Link](https://www.dl-sounds.com/royalty-free/fashion/)
 * Mid-level Bosses Music - *Break A Leg* - [Link](https://www.dl-sounds.com/royalty-free/break-a-leg/)
 * Final Boss Music - *Power Up* - [Link](https://www.dl-sounds.com/royalty-free/power-up/)
-* Custom Encounter Soundbites generated via [Link](https://github.com/ShayneReedSmith)
+* Custom Encounter Soundbites generated via [Chiptone](http://www.superflashbros.net/as3sfxr/)
 
 
 
