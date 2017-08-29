@@ -1,15 +1,15 @@
 function deathCheck(charOne, charTwo){
   if (charTwo.hp <= 0 && userCharacter.hp > 0){
     var display = charTwo.name + ' soul is at rest. R.I.P';
-    deathDisplay(display);
+    displayText(display);
   }
   if (charOne.hp <= 0 && userCharacter.hp > 0){
     var display = charTwo.name + ' soul is at rest. R.I.P';
-    deathDisplay(display);
+    displayText(display);
   }
 }
 
-function deathDisplay(display){
+function displayText(display){
   var textField = document.getElementsByClassName('textField')[0];
   while (textField.hasChildNodes()) {
     textField.removeChild(textField.lastChild);
@@ -26,6 +26,7 @@ function deathDisplay(display){
   choiceOne.setAttribute('id', 'strChoice');
   textField.appendChild(choiceOne);
   choiceOne.addEventListener('click', continueToQuestion);
+  clearTimeout();
 }
 
 function characterDeath(){

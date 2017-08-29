@@ -1,4 +1,4 @@
-function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn){
+function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn, enemy){
   var textField = document.getElementsByClassName('textField')[0];
   console.log(textField);
   while (textField.hasChildNodes()) {
@@ -16,16 +16,21 @@ function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn){
   var choiceOne = document.createElement('li');
   choiceOne.innerText = choiceOneIn;
   choiceOne.setAttribute('id', 'strChoice');
-  choiceOne.addEventListener('click', strengthListener);
   var choiceTwo = document.createElement('li');
   choiceTwo.innerText = choiceTwoIn;
   choiceTwo.setAttribute('id', 'intChoice');
-  choiceTwo.addEventListener('click', intListener);
   var choiceThree = document.createElement('li');
   choiceThree.innerText = choiceThreeIn;
   choiceThree.setAttribute('id', 'agilChoice');
+  // if(enemy === true){
+  choiceOne.addEventListener('click', strengthListener);
+  choiceTwo.addEventListener('click', intListener);
   choiceThree.addEventListener('click', agilListener);
-
+  // }else if(enemy === false){
+  //   choiceOne.addEventListener('click', strengthEnvironment);
+  //   choiceOne.addEventListener('click', intEnvironment);
+  //   choiceOne.addEventListener('click', agilEnvironment);
+  // }
   var answersArray = [];
   answersArray.push(choiceOne, choiceTwo, choiceThree);
   setTimeout(function(){
@@ -39,22 +44,23 @@ function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn){
         answersArray.splice(randIndex, 1);}, 500 + (i * 200));
     }} , 5000);
 
-  if (userCharacter.hp <= 0){
-    clearTimeout();
-    console.log(userCharacter.hp);
-    characterDeath();
-  }
+  // if (userCharacter.hp <= 0){
+  //   clearTimeout();
+  //   console.log(userCharacter.hp);
+  //   characterDeath();
+  // }
 };
 
 function strengthListener(event){
   event.preventDefault();
-  fightCheck(userCharacter, enemyCharacter, 'str');
+  fightCheck(userCharacter, enemyCharacter[questionCounter], 'str');
 }
 function intListener(event){
   event.preventDefault();
-  fightCheck(userCharacter, enemyCharacter, 'int');
+  fightCheck(userCharacter, enemyCharacter[questionCounter], 'int');
 }
 function agilListener(event){
   event.preventDefault();
-  fightCheck(userCharacter, enemyCharacter, 'agil');
+  fightCheck(userCharacter, enemyCharacter[questionCounter], 'agil');
 }
+changeQuestion(questionTextArray[0], strOptionArray[0], intOptionArray[0], agilOptionArray[0], enemyEnvironmentArray[0]);
