@@ -6,6 +6,7 @@ intOptionArray = ['this is the Intelligence Option', 'this is the Intelligence O
 agilOptionArray = ['This is the agility option', 'This is the agility option'];
 
 function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn){
+
   var textField = document.getElementsByClassName('textField')[0];
   console.log(textField);
   while (textField.hasChildNodes()) {
@@ -54,6 +55,11 @@ function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn){
   //   unList.appendChild(lineBreakTwo);}, 1700);
   // setTimeout(function(){
   //   unList.appendChild(choiceThree);}, 2000);
+  if (userCharacter.hp <= 0){
+    clearTimeout();
+    console.log(userCharacter.hp);
+    characterDeath();
+  }
 };
 function strengthListener(event){
   event.preventDefault();

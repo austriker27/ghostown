@@ -32,61 +32,64 @@ function damageRedisplayQuestion(event){
   clearTimeout();
   changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
 }
-
+function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
+  if(compareStat == inputStat){
+    var damage = charOne[inputStat] - charTwo[inputStat];
+    if (damage > -1){
+      charTwo.hp -= damage;
+      var display = charTwo.name + ' took ' + damage + ' points of damage.';
+      damageDisplay(display);
+      setTimeout(function(){
+        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
+      }, 4000);
+    }else {
+      charOne.hp += damage;
+      var display = 'Oh no, ' + charTwo.name + ' has a higher ' + inputStat + ' level! ' + charOne.name + ' took ' + (-1 * damage) + ' points of damage.';
+      damageDisplay(display);
+      setTimeout(function(){
+        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
+      }, 4000);
+    }
+  }
+}
 function fightCheck (charOne, charTwo, stat){
-  if('str' == stat){
-    var damage = charOne.str - charTwo.str;
-    if (damage > -1){
-      charTwo.hp -= damage;
-      var display = charTwo.name + ' took ' + damage + ' points of damage.';
-      damageDisplay(display);
-      setTimeout(function(){
-        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
-      }, 4000);
-    }else {
-      charOne.hp += damage;
-      var display = 'Oh no, ' + charTwo.name + ' has a higher ' + stat + ' level! ' + charOne.name + ' took ' + (-1 * damage) + ' points of damage.';
-      damageDisplay(display);
-      setTimeout(function(){
-        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
-      }, 4000);
-    }
-  }
-  if(stat == 'agil'){
-    var damage = (charOne.agil - charTwo.agil);
-    if (damage > -1){
-      charTwo.hp -= damage;
-      var display = charTwo.name + ' took ' + damage + ' points of damage.';
-    }else {
-      charOne.hp += damage;
-      var display = 'Oh no, ' + charTwo.name + ' has a higher ' + stat + ' level! ' + charOne.name + ' took ' + (-1 * damage) + ' points of damage.';
-    }
-  }
-  if(stat == 'int'){
-    var damage = (charOne.int - charTwo.int);
-    if (damage > -1){
-      charTwo.hp -= damage;
-      var display = charTwo.name + ' took ' + damage + ' points of damage.';
-    }else {
-      charOne.hp += damage;
-      var display = 'Oh no, ' + charTwo.name + ' has a higher ' + stat + ' level! ' + charOne.name + ' took ' + (-1 * damage) + ' points of damage.';
-    }
-  }
+  fightCheckStatType(stat, 'str', charOne, charTwo);
+  fightCheckStatType(stat, 'int', charOne, charTwo);
+  fightCheckStatType(stat, 'agil', charOne, charTwo);
   if (charOne.hp <= 0 || charTwo.hp <= 0){
     deathCheck(charOne, charTwo);
   }
 }
 
 // Need global user name to display user death
-// function deathCheck(charOne, charTwo){
-//   if (charTwo.hp <= 0){
-//     var display = charTwo.name + ' soul is at rest. R.I.P';
-//   }
-//   if (charOne.hp <= 0){
-//     var display = 'Oh No! You perished. Your soul moves on to a better realm.';
-//   }
-// }
-
+function deathCheck(charOne, charTwo){
+  if (charTwo.hp <= 0 && userCharacter.hp > 0){
+    var display = charTwo.name + ' soul is at rest. R.I.P';
+    deathDisplay(display);
+  }
+  if (charOne.hp <= 0 && userCharacter.hp > 0){
+    var display = charTwo.name + ' soul is at rest. R.I.P';
+    deathDisplay(display);
+  }
+}
+function characterDeath(){
+  var textField = document.getElementsByClassName('textField')[0];
+  while (textField.hasChildNodes()) {
+    textField.removeChild(textField.lastChild);
+  };
+  var speakingField = document.createElement('h2');
+  textField.appendChild(speakingField);
+  var promptField = document.createElement('p');
+  promptField.innerText = 'Game OVER';
+  promptField.setAttribute('class', 'gameOver');
+  textField.appendChild(promptField);
+  promptField.addEventListener('click', resetGame);
+  clearTimeout();
+}
+function resetGame(event){
+  localStorage.clear;
+  window.open('index.html','_self');
+}
 function deathDisplay(display){
   var textField = document.getElementsByClassName('textField')[0];
   while (textField.hasChildNodes()) {
