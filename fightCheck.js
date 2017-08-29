@@ -39,6 +39,10 @@ function fightCheck (charOne, charTwo, stat){
     if (damage > -1){
       charTwo.hp -= damage;
       var display = charTwo.name + ' took ' + damage + ' points of damage.';
+      damageDisplay(display);
+      setTimeout(function(){
+        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
+      }, 4000);
     }else {
       charOne.hp += damage;
       var display = 'Oh no, ' + charTwo.name + ' has a higher ' + stat + ' level! ' + charOne.name + ' took ' + (-1 * damage) + ' points of damage.';
