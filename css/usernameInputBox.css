@@ -10,7 +10,6 @@ form {
   border-radius: 5px;
   animation: nameInput 1.5s forwards;
   animation-iteration-count: 1;
-  animation-delay: 1s;
   font-family: 'Special Elite', cursive;
 }
 
