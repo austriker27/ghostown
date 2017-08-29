@@ -1,7 +1,7 @@
 .spatter1 {
   position: absolute;
   right: 26%;
-  animation: spatter1 44s none;
+  animation: spatter1 60s none;
   animation-timing-function:linear;
   animation-iteration-count: infinite;
   z-index: 2;
@@ -14,7 +14,7 @@
 .spatter2 {
   position: absolute;
   right: 25%;
-  animation: spatter2 46s none;
+  animation: spatter2 70s none;
   animation-timing-function:linear;
   animation-iteration-count: infinite;
   z-index: 2;
@@ -27,7 +27,7 @@
 .spatter3 {
   position: absolute;
   right: 25%;
-  animation: spatter3 48s none;
+  animation: spatter3 100s none;
   animation-timing-function:linear;
   animation-iteration-count: infinite;
   z-index: 2;
@@ -40,7 +40,7 @@
 .spatter4 {
   position: absolute;
   right: 25%;
-  animation: spatter4 50s none;
+  animation: spatter4 80s none;
   animation-timing-function:linear;
   animation-iteration-count: infinite;
   z-index: 0;
