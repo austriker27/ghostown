@@ -80,6 +80,17 @@ We use [GitHub](http://www.github.com) for versioning. For the versions availabl
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
+## Music Acknowledgments
+
+* Landing Page Background Music - *8-bit-Arcade4-nosfx* - [Link](https://www.dl-sounds.com/royalty-free/8-bit-arcade4/)
+* Game Page Background Music - *Little Swans Game* - [Link](https://www.dl-sounds.com/royalty-free/little-swans-game/)
+* Entry Boss Music - *Contributor* - [Link](https://github.com/ShayneReedSmith)
+* Mid-level Bosses Music - *Break A Leg* - [Link](https://www.dl-sounds.com/royalty-free/break-a-leg/)
+* Final Boss Music - *Power Up* - [Link](https://www.dl-sounds.com/royalty-free/power-up/)
+* Encounter Soundbite - *Contributor* - [Link](https://github.com/ShayneReedSmith)
+
+
+
 ## Acknowledgments
 
 * Hat tip to anyone who's code was used
