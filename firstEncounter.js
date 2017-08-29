@@ -7,6 +7,7 @@ agilOptionArray = ['This is the agility option', 'This is the agility option'];
 
 function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn){
   var textField = document.getElementsByClassName('textField')[0];
+  console.log(textField);
   while (textField.hasChildNodes()) {
     textField.removeChild(textField.lastChild);
   };

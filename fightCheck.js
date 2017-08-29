@@ -21,27 +21,33 @@ function damageDisplay(display){
   textField.appendChild(promptField);
   var unList = document.createElement('ul');
   textField.appendChild(unList);
-  var choiceOne = document.createElement('li');
-  choiceOne.innerText = 'Continue';
-  choiceOne.setAttribute('id', 'strChoice');
-  textField.appendChild(choiceOne);
-  choiceOne.addEventListener('click', changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]));
+  var continueButton = document.createElement('li');
+  continueButton.innerText = 'Continue';
+  continueButton.setAttribute('id', 'continueButton');
+  textField.appendChild(continueButton);
+  continueButton.addEventListener('click', damageRedisplayQuestion);
+}
+function damageRedisplayQuestion(event){
+  clearTimeout();
+  changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
 }
 function fightCheck (charOne, charTwo, stat){
   if('str' == stat){
-    var damage = (charOne.str - charTwo.str);
+    var damage = charOne.str - charTwo.str;
     if (damage > -1){
       charTwo.hp -= damage;
       var display = charTwo.name + ' took ' + damage + ' points of damage.';
       damageDisplay(display);
       setTimeout(function(){
-        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);}, 2000);
-    }else {
+        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
+      }, 4000);
+    } else {
       charOne.hp += damage;
       var display = 'Oh no, ' + charTwo.name + ' has a higher ' + stat + ' level! ' + charOne.name + ' took ' + (-1 * damage) + ' points of damage.';
       damageDisplay(display);
       setTimeout(function(){
-        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);}, 2000);
+        changeQuestion(questionTextArray[questionCounter], strOptionArray[questionCounter], intOptionArray[questionCounter], agilOptionArray[questionCounter]);
+      }, 4000);
     }
   }
   if(stat == 'agil'){
