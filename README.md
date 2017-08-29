@@ -95,6 +95,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
+* Hat tip to [Alex Katz](http://alexkatz.me/posts/building-a-custom-html5-audio-player-with-javascript/) whose walk through on building a customer HTML5 audio player was most helpful in constructing our audio player.
 * Inspiration
 * etc
