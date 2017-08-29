@@ -5,6 +5,7 @@
   font-size: 2em;
   font-family: 'Didact Gothic', sans-serif;
   width: 100%;
+  min-height: 1em;
   background: black;
   color: #f0a;
   z-index: 2;
