@@ -59,6 +59,8 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Atom](http://atom.io) - The text editor used, as required by Code Fellows
+* [Feather Icons](https://feathericons.com/) - Open source icons used in our project
+
 
 ## Powered by
 

@@ -13,6 +13,11 @@
   border-bottom: 2px solid #272727;
 }
 
+.navBar a {
+  text-decoration: none;
+  color: #f0a;
+}
+
 @keyframes navbar {
   50% {top: -9%;}
   100% {top: -11%;}

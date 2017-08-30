@@ -1,22 +1,65 @@
-
-
-.author {
-  display: block;
-  margin: 5% 5% 5% 5%
-}
-
-.author {
-  padding: 1% 1% 1% 1%;
-}
-
-.div {
-  position: absolute;
-  top: 50%;
-  display: block;
+body {
+  font-family: 'Special Elite', cursive;
 }
 
 h2 {
   display: block;
   position: absolute;
   top: 30%;
+  margin: 2% 5% 2% 5%;
+  padding: 0% 2% 0% 2%;
+}
+
+.author {
+  display: block;
+  margin: 5% 5% 5% 5%;
+  position: relative;
+  top: 30%;
+}
+
+.author p, .author h3 {
+  display: inline;
+  margin: 1% 1% 1% 1%;
+  padding: 2% 2% 2% 2%;
+}
+
+.author p {
+  display: inline-block;
+}
+
+.author h3 {
+  width: 20%;
+  font-size: 1.5em;
+}
+
+.author img {
+  border-radius: 80px;
+  float: left;
+}
+
+.clearFloat {
+  float: none;
+}
+
+.author {
+  padding: 1% 1% 1% 1%;
+}
+
+.authorName {
+  display: inline;
+  /*float: left;*/
+}
+
+.socialMediaBtns {
+  display: inline-block;
+}
+
+.socialMediaBtns img {
+  padding: 5px 5px 5px 5px;
+
+}
+
+.authorTexts {
+  /*float: right;
+  display: inline-block;*/
 }
