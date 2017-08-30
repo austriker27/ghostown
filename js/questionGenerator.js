@@ -16,21 +16,16 @@ function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn, e
   var choiceOne = document.createElement('li');
   choiceOne.innerText = choiceOneIn;
   choiceOne.setAttribute('id', 'strChoice');
+  choiceOne.addEventListener('click', strengthListener);
   var choiceTwo = document.createElement('li');
   choiceTwo.innerText = choiceTwoIn;
   choiceTwo.setAttribute('id', 'intChoice');
+  choiceTwo.addEventListener('click', intListener);
   var choiceThree = document.createElement('li');
   choiceThree.innerText = choiceThreeIn;
   choiceThree.setAttribute('id', 'agilChoice');
-  // if(enemy === true){
-  choiceOne.addEventListener('click', strengthListener);
-  choiceTwo.addEventListener('click', intListener);
   choiceThree.addEventListener('click', agilListener);
-  // }else if(enemy === false){
-  //   choiceOne.addEventListener('click', strengthEnvironment);
-  //   choiceOne.addEventListener('click', intEnvironment);
-  //   choiceOne.addEventListener('click', agilEnvironment);
-  // }
+
   var answersArray = [];
   answersArray.push(choiceOne, choiceTwo, choiceThree);
   setTimeout(function(){
@@ -63,4 +58,4 @@ function agilListener(event){
   event.preventDefault();
   fightCheck(userCharacter, enemyCharacter[questionCounter], 'agil');
 }
-changeQuestion(questionTextArray[0], strOptionArray[0], intOptionArray[0], agilOptionArray[0], enemyEnvironmentArray[0]);
+changeQuestion(encounterArray[0][0], encounterArray[0][1], encounterArray[0][2], encounterArray[0][3], encounterArray[0][4]);
