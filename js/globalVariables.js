@@ -10,6 +10,7 @@ function Character (name, str, agil, int, hp, ghostType){
   this.totalLvl = 0;
 }
 
+var enemyTurn = false;
 var questionCounter = 0;
 var enemyCharacter = [];
 var encounterArray = [];
@@ -24,7 +25,7 @@ var ghostlyEncounter = ['Oh god, a cute yet legally differentialble character na
 var thirdDropEncounter = ['The ghostly ghost drops a couple more items. Make sure you choose wisely, you have a bad feeling somethign big is coming.', 'Gas Cloud', 'Fuji Apple', 'Skateboard', false];
 var finalBossEncounter = ['Welp, this is it. It doesnt look like your going to make it out of this one. That guy looks real big. You remind yourself that youve died once before, which calms you down momentarily, anticipating the impending ass kicking. Your move', 'This is the strength Option', 'this is the Intelligence Option', 'This is the agility option', true];
 encounterArray.push(dogEncounter, hipsterEncounter, firstDropEncounter, enviroOneEncounter, skeletonEncounter, secondDropEncounter, enviroTwoEncounter, ghostlyEncounter, thirdDropEncounter, finalBossEncounter);
-var Doggo = new Character('Doggo', 1, 4, 1, 100);
+var Doggo = new Character('Doggo', 10, 10, 1, 100);
 var hipsterGhost = new Character('Hipster Ghost', 8, 4, 3, 15);
 var firstItemDrop = new Character('Item Drop One', 506, 507, 508, 1);
 var enviroOne = new Character('Skeleton Trap', 500, 501, 502, 1);

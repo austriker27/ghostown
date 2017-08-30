@@ -14,7 +14,7 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
       var statDifference = charOne[inputStat] - charTwo[inputStat];
       if (statDifference <= 0){
         var display = charOne.name + '\'s move fails to deal any damage';
-        damageDisplay(display);
+        // damageDisplay(display);
       }
       else if (statDifference > 0){
         function dndSim(){var num = Math.floor(Math.random() * (21 - 1) + 1);
@@ -61,18 +61,15 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
           damage = 20;
           display = charOne.name + '\'s attack power was matched by ' + charTwo.name + '\'s defenses. Normal damage was dealt.';
         }
-        charTwo.hp -= damage;
-        damageDisplay(display);
-      // var damage = charOne[inputStat] - charTwo[inputStat];
-      // if (damage > -1){
-      //   charTwo.hp -= damage;
-      //   var display = charTwo.name + ' took ' + damage + ' points of damage.';
-      //   damageDisplay(display);
-      // }else {
-      //   charOne.hp += damage;
-      //   var display = 'Oh no, ' + charTwo.name + ' has a higher ' + inputStat + ' level! ' + charOne.name + ' took ' + (-1 * damage) + ' points of damage.';
-      //   damageDisplay(display);
       }
+      charTwo.hp -= damage;
+      damage = 0;
+      if(enemyTurn){
+        enemyTurn = false;
+      }else{
+        enemyTurn = true;
+      }
+      damageDisplay(display);
     }
     else if (charTwo[inputStat] > 499 && charTwo[inputStat] < 506){
       enviroEventFunct(inputStat, compareStat, charOne, charTwo);}
@@ -98,9 +95,19 @@ function damageDisplay(display){
   continueButton.innerText = 'Continue';
   continueButton.setAttribute('id', 'continueButton');
   textField.appendChild(continueButton);
-  continueButton.addEventListener('click', damageRedisplayQuestion);
+  if(enemyTurn){
+    continueButton.removeEventListener('click', damageRedisplayQuestion);
+    continueButton.addEventListener('click', enemyTurnFunction);
+  }else{
+    continueButton.removeEventListener('click', enemyTurnFunction);
+    continueButton.addEventListener('click', damageRedisplayQuestion);
+  };
 }
-
+function enemyTurnFunction(){
+  var statsArray = ['str', 'int', 'agil'];
+  var randNum = Math.floor(Math.random() * statsArray.length);
+  fightCheck(enemyCharacter[questionCounter], userCharacter, statsArray[randNum]);
+}
 function damageRedisplayQuestion(event){
   clearTimeout();
   changeQuestion(encounterArray[questionCounter][0], encounterArray[questionCounter][1], encounterArray[questionCounter][2], encounterArray[questionCounter][3], encounterArray[questionCounter][4]);
