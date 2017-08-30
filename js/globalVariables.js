@@ -15,13 +15,13 @@ var encounterArray = [['This is the Dog encoutner. Fight him', 'This is the stre
 
 var Doggo = new Character('Doggo', 1, 4, 1, 10);
 var hipsterGhost = new Character('Hipster Ghost', 8, 4, 3, 15);
-var firstItemDrop = new Character('Item Drop One', 6, 7, 8, 1);
-var enviroOne = new Character('Skeleton Trap', 0, 1, 2, 1);
+var firstItemDrop = new Character('Item Drop One', 506, 507, 508, 1);
+var enviroOne = new Character('Skeleton Trap', 500, 501, 502, 1);
 var Skeleton = new Character('Skeleton', 10, 7, 5, 20);
-var secondItemDrop = new Character('Item Drop Two', 9, 10, 11, 1);
-var enviroTwo = new Character('Second Environment', 3, 4, 5, 1);
+var secondItemDrop = new Character('Item Drop Two', 509, 5010, 5011, 1);
+var enviroTwo = new Character('Second Environment', 503, 504, 505, 1);
 var ghostly = new Character('Ghostly', 7, 14, 12, 22);
-var thirdItemDrop = new Character('Item Drop Three', 12, 13, 14, 1);
+var thirdItemDrop = new Character('Item Drop Three', 5012, 5013, 5014, 1);
 var finalBoss = new Character('Chaos Lord', 20, 13, 17, 30);
 enemyCharacter.push(Doggo, hipsterGhost, firstItemDrop, enviroOne, Skeleton, secondItemDrop, enviroTwo, ghostly, thirdItemDrop, finalBoss);
 // TODO:

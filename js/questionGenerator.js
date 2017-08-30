@@ -16,21 +16,16 @@ function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn, e
   var choiceOne = document.createElement('li');
   choiceOne.innerText = choiceOneIn;
   choiceOne.setAttribute('id', 'strChoice');
+  choiceOne.addEventListener('click', strengthListener);
   var choiceTwo = document.createElement('li');
   choiceTwo.innerText = choiceTwoIn;
   choiceTwo.setAttribute('id', 'intChoice');
+  choiceTwo.addEventListener('click', intListener);
   var choiceThree = document.createElement('li');
   choiceThree.innerText = choiceThreeIn;
   choiceThree.setAttribute('id', 'agilChoice');
-  // if(enemy === true){
-  choiceOne.addEventListener('click', strengthListener);
-  choiceTwo.addEventListener('click', intListener);
   choiceThree.addEventListener('click', agilListener);
-  // }else if(enemy === false){
-  //   choiceOne.addEventListener('click', strengthEnvironment);
-  //   choiceOne.addEventListener('click', intEnvironment);
-  //   choiceOne.addEventListener('click', agilEnvironment);
-  // }
+
   var answersArray = [];
   answersArray.push(choiceOne, choiceTwo, choiceThree);
   setTimeout(function(){
