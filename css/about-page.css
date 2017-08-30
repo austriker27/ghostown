@@ -1,4 +1,6 @@
-
+body {
+  font-family: 'Special Elite', cursive;
+}
 
 .author {
   display: block;
@@ -24,6 +26,11 @@
 
 .author {
   padding: 1% 1% 1% 1%;
+}
+
+.authorName {
+  display: inline;
+  /*float: left;*/
 }
 
 .div {
