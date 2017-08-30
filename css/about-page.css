@@ -43,6 +43,7 @@ h2 {
   margin: 5% 5% 5% 5%;
   position: relative;
   top: 30%;
+  width: 80%;
 }
 
 .author p, .author h3 {
@@ -53,18 +54,26 @@ h2 {
 
 .author p {
   display: inline;
-  padding: 3% 3% 3% 3%;
   float: left;
+  line-height: 1.8em;
+  font-size: 16px;
+  color: rgb(29, 29, 29);
+  text-align: justify;
+  background-color: rgb(160, 0, 255);
+  border-radius: 20px;
 }
 
 .author h3 {
-  width: 30%;
-  font-size: 1.5em;
+  font-size: 2em;
+  padding: 5% 0% 5% 0%;
+  float: left;
 }
 
 .author img {
   border-radius: 80px;
-  /*float: left;*/
+  position: relative;
+  top: 0px;
+  left: 0px;
 }
 
 .clearFloat {
@@ -72,23 +81,19 @@ h2 {
 }
 
 .authorName {
-  display: inline;
-  width: 40%;
+  display: inline-block;
+  width: 35%;
   float: left;
+  margin: 10% 0% 1% 0%;
 }
 
 .socialMediaBtns {
-  display: inline-block;
-  width: 40%;
-  margin: 0 auto;
+  display: inline;
+  width: 35%;
+  margin: 10% 0% 1% 0%;
   float: right;
 }
 
 .socialMediaBtns img {
   padding: 5px 5px 5px 5px;
-}
-
-.authorTexts {
-  float: right;
-  display: inline-block;
 }
