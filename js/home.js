@@ -32,7 +32,6 @@ function selectGhost(event){
   inputElm.setAttribute('type', 'text');
   inputElm.setAttribute('name', 'nameForm');
   var formElm = document.getElementById('formBoxTransition');
-  // formElm.setAttribute('id', 'formBoxTransition');
   formElm.appendChild(inputElm);
   formElm.addEventListener('submit', startGame);
 }
