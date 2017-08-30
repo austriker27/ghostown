@@ -14,7 +14,7 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
       var statDifference = charOne[inputStat] - charTwo[inputStat];
       if (statDifference <= 0){
         var display = charOne.name + '\'s move fails to deal any damage';
-        // damageDisplay(display);
+        var damage = 0;
       }
       else if (statDifference > 0){
         function dndSim(){var num = Math.floor(Math.random() * (21 - 1) + 1);
@@ -63,7 +63,7 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
         }
       }
       charTwo.hp -= damage;
-      damage = 0;
+
       if(enemyTurn){
         enemyTurn = false;
       }else{
