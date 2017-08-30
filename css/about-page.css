@@ -1,6 +1,7 @@
 .ghosTown {
   text-align: center;
   position: relative;
+  margin: 2%;
   font-size: 10em;
   font-family: 'Freckle Face', cursive;
   text-shadow: 1px 1px black,
@@ -28,6 +29,7 @@ body {
   font-family: 'Special Elite', cursive;
   background: #aa00ff;
   min-width: 900px;
+  margin: 0;
 }
 
 h2 {
