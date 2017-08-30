@@ -1,6 +1,5 @@
 function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn, enemy){
   var textField = document.getElementsByClassName('textField')[0];
-  console.log(textField);
   while (textField.hasChildNodes()) {
     textField.removeChild(textField.lastChild);
   };

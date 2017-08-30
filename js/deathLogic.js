@@ -1,4 +1,7 @@
 function deathCheck(charOne, charTwo){
+  if (userCharacter.hp <= 0){
+    characterDeath();
+  }
   if (charTwo.hp <= 0 && userCharacter.hp > 0){
     var display = charTwo.name + ' soul is at rest. R.I.P';
     displayText(display);

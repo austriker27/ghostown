@@ -6,6 +6,7 @@ function Character (name, str, agil, int, hp, ghostType){
   this.hp = hp;
   this.ghostType = 0;
   this.totalLvl = 0;
+  this.backpack = [];
 }
 var userChar = null;
 for(var i = 0; i < document.getElementsByClassName('ghostPic').length; i++){
