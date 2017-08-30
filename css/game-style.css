@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  position:fixed;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  background: #aa00ff;
+  min-width: 900px;
+}

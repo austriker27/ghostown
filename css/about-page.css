@@ -1,5 +1,7 @@
 body {
   font-family: 'Special Elite', cursive;
+  background: #aa00ff;
+  min-width: 900px;
 }
 
 h2 {
