@@ -6,7 +6,8 @@ h2 {
   display: block;
   position: absolute;
   top: 30%;
-  margin: 2% 2% 2% 2%;
+  margin: 2% 5% 2% 5%;
+  padding: 0% 2% 0% 2%;
 }
 
 .author {
@@ -22,12 +23,22 @@ h2 {
   padding: 2% 2% 2% 2%;
 }
 
+.author p {
+  display: inline-block;
+}
+
 .author h3 {
   width: 20%;
+  font-size: 1.5em;
 }
 
 .author img {
   border-radius: 80px;
+  float: left;
+}
+
+.clearFloat {
+  float: none;
 }
 
 .author {
@@ -40,5 +51,15 @@ h2 {
 }
 
 .socialMediaBtns {
-  display: inline;
+  display: inline-block;
+}
+
+.socialMediaBtns img {
+  padding: 5px 5px 5px 5px;
+
+}
+
+.authorTexts {
+  /*float: right;
+  display: inline-block;*/
 }
