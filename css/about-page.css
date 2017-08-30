@@ -1,3 +1,29 @@
+.ghosTown {
+  text-align: center;
+  position: relative;
+  font-size: 10em;
+  font-family: 'Freckle Face', cursive;
+  text-shadow: 1px 1px black,
+              2px 2px black,
+              3px 3px black,
+              4px 4px #aaff01,
+              5px 5px #aaff01,
+              6px 6px #aaff01;
+  color: #0af;
+  animation: title 1.5s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+
+@keyframes title {
+  25% {top: 20%;}
+  35% {transform: rotate(10deg);}
+  50% {top: -8%;}
+  55% {transform: rotate(-10deg);}
+  100% {top: 3%;}
+}
+
+
 body {
   font-family: 'Special Elite', cursive;
   background: #aa00ff;
@@ -26,42 +52,43 @@ h2 {
 }
 
 .author p {
-  display: inline-block;
+  display: inline;
+  padding: 3% 3% 3% 3%;
+  float: left;
 }
 
 .author h3 {
-  width: 20%;
+  width: 30%;
   font-size: 1.5em;
 }
 
 .author img {
   border-radius: 80px;
-  float: left;
+  /*float: left;*/
 }
 
 .clearFloat {
   float: none;
 }
 
-.author {
-  padding: 1% 1% 1% 1%;
-}
-
 .authorName {
   display: inline;
-  /*float: left;*/
+  width: 40%;
+  float: left;
 }
 
 .socialMediaBtns {
   display: inline-block;
+  width: 40%;
+  margin: 0 auto;
+  float: right;
 }
 
 .socialMediaBtns img {
   padding: 5px 5px 5px 5px;
-
 }
 
 .authorTexts {
-  /*float: right;
-  display: inline-block;*/
+  float: right;
+  display: inline-block;
 }
