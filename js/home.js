@@ -49,19 +49,19 @@ function startGame(event){
     mainCharacter.str = genStats(5, 3);
     mainCharacter.int = genStats(3, 1);
     mainCharacter.agil = genStats(7, 5);
-    mainCharacter.hp = genStats(12, 9);
+    mainCharacter.hp = genStats(30, 25);
     mainCharacter.ghostType = 0;
   }else if(userChar == 'ghostTwo'){
     mainCharacter.str = genStats(3, 1);
     mainCharacter.int = genStats(7, 5);
     mainCharacter.agil = genStats(5, 3);
-    mainCharacter.hp = genStats(11, 8);
+    mainCharacter.hp = genStats(28, 23);
     mainCharacter.ghostType = 1;
   }else if(userChar == 'ghostThree'){
     mainCharacter.str = genStats(9, 7);
     mainCharacter.int = genStats(3, 1);
     mainCharacter.agil = genStats(3, 1);
-    mainCharacter.hp = genStats(14, 11);
+    mainCharacter.hp = genStats(35, 30);
     mainCharacter.ghostType = 2;
   }
   mainCharacter.totalLvl = (mainCharacter.str + mainCharacter.int + mainCharacter.agil + mainCharacter.hp);
