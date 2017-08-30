@@ -4,10 +4,12 @@ function deathCheck(charOne, charTwo){
   }
   if (charTwo.hp <= 0 && userCharacter.hp > 0){
     var display = charTwo.name + ' soul is at rest. R.I.P';
+    enemyTurn = false;
     displayText(display);
   }
   if (charOne.hp <= 0 && userCharacter.hp > 0){
     var display = charOne.name + ' soul is at rest. R.I.P';
+    enemyTurn = false;
     displayText(display);
   }
 }
