@@ -2,6 +2,13 @@ body {
   font-family: 'Special Elite', cursive;
 }
 
+h2 {
+  display: block;
+  position: absolute;
+  top: 30%;
+  margin: 2% 2% 2% 2%;
+}
+
 .author {
   display: block;
   margin: 5% 5% 5% 5%;
@@ -13,7 +20,6 @@ body {
   display: inline;
   margin: 1% 1% 1% 1%;
   padding: 2% 2% 2% 2%;
-  float: right;
 }
 
 .author h3 {
@@ -33,15 +39,6 @@ body {
   /*float: left;*/
 }
 
-.div {
-  position: absolute;
-  top: 50%;
-  display: block;
-}
-
-h2 {
-  display: block;
-  position: absolute;
-  top: 30%;
-  margin: 2% 2% 2% 2%;
+.socialMediaBtns {
+  display: inline;
 }
