@@ -1,3 +1,4 @@
+
 function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn, enemy){
   var textField = document.getElementsByClassName('textField')[0];
   while (textField.hasChildNodes()) {
@@ -36,13 +37,7 @@ function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn, e
         lineBreakOne.setAttribute('class', 'break');
         unList.appendChild(lineBreakOne);
         answersArray.splice(randIndex, 1);}, 500 + (i * 200));
-    }} , 5000);
-
-  // if (userCharacter.hp <= 0){
-  //   clearTimeout();
-  //   console.log(userCharacter.hp);
-  //   characterDeath();
-  // }
+    }} , 2000);
 };
 
 function strengthListener(event){
