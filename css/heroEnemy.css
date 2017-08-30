@@ -1,7 +1,7 @@
 .hero img {
   z-index: 2;
   position: absolute;
-  top: -8%;
+  top: 7%;
   left: 0%;
   opacity: 0;
   animation: hero 1s forwards;
@@ -12,14 +12,14 @@
 
 @keyframes hero {
   50% {left: 30%;}
-  100% {left: 10%;}
+  100% {left: 15%;}
   100% {opacity: 1;}
-  100% {transform: scale(0.4);}
+  100% {transform: scale(0.5);}
   100% {top: -8%;}
 }
 
 .enemy img{
-  transform: scale(5);
+  transform: scale(1.4);
   z-index: 2;
   top: 7%;
   right: 0%;
@@ -31,6 +31,27 @@
 }
 
 @keyframes enemy {
+
+  50% {right: 40%;}
+  100% {right: 25%;}
+  100% {opacity: 1;}
+  100% {transform: scale(1);}
+}
+
+
+.enemyBoss img{
+  transform: scale(5);
+  z-index: 2;
+  top: 7%;
+  right: 0%;
+  position: absolute;
+  opacity: 0;
+  animation: enemyBoss 1s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 2.5s;
+}
+
+@keyframes enemyBoss {
 
   50% {right: 40%;}
   100% {right: 25%;}
