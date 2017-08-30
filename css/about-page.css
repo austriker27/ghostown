@@ -1,0 +1,22 @@
+
+
+.author {
+  display: block;
+  margin: 5% 5% 5% 5%
+}
+
+.author {
+  padding: 1% 1% 1% 1%;
+}
+
+.div {
+  position: absolute;
+  top: 50%;
+  display: block;
+}
+
+h2 {
+  display: block;
+  position: absolute;
+  top: 30%;
+}
