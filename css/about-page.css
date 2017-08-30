@@ -2,7 +2,24 @@
 
 .author {
   display: block;
-  margin: 5% 5% 5% 5%
+  margin: 5% 5% 5% 5%;
+  position: relative;
+  top: 30%;
+}
+
+.author p, .author h3 {
+  display: inline;
+  margin: 1% 1% 1% 1%;
+  padding: 2% 2% 2% 2%;
+  float: right;
+}
+
+.author h3 {
+  width: 20%;
+}
+
+.author img {
+  border-radius: 80px;
 }
 
 .author {
@@ -19,4 +36,5 @@ h2 {
   display: block;
   position: absolute;
   top: 30%;
+  margin: 2% 2% 2% 2%;
 }
