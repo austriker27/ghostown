@@ -103,4 +103,4 @@ function agilListener(event){
   event.preventDefault();
   fightCheck(userCharacter, enemyCharacter[questionCounter], 'agil');
 }
-changeQuestion(encounterArray[0][0], encounterArray[0][1], encounterArray[0][2], encounterArray[0][3], encounterArray[0][4]);
+// changeQuestion(encounterArray[0][0], encounterArray[0][1], encounterArray[0][2], encounterArray[0][3], encounterArray[0][4]);
