@@ -8,7 +8,7 @@ function howToMenu() {
 
   var howToPlay2 = document.createElement('p');
   howToPlay2.setAttribute('class', 'howToItem');
-  howToPlay2.innerText = 'Each ghostie has an advantage/disadvantage in Strength, Intelligence, or Agility -- the ghostie you choose matters.';
+  howToPlay2.innerText = 'Each ghostie has an advantage / disadvantage in Strength, Intelligence, or Agility -- the ghostie you choose matters.';
   mouseOverHowToPlay.appendChild(howToPlay2);
 
   var howToPlay3 = document.createElement('p');
