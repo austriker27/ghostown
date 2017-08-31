@@ -18,22 +18,11 @@
 }
 
 @keyframes title {
-  /*from {
-    margin-top: -110%;
-  }
-
-  to {
-    margin-top: 3%;
-    position: relative;
-  }*/
   25% {top: 150%;}
   35% {transform: rotate(10deg);}
   50% {top: 10%;}
   55% {transform: rotate(-10deg);}
-  100% {
-    top: 3%;
-    position: relative;
-  }
+  100% {top: 3%;}
 }
 
 
