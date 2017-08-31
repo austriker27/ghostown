@@ -22,7 +22,7 @@ var enemyTurn = false;
 var questionCounter = 0;
 var enemyCharacter = [];
 var encounterArray = [];
-var dogEncounter = ['This is the Dog encoutner. Fight him', 'This is the strength Option', 'this is the Intelligence Option', 'This is the agility option', true];
+var dogEncounter = ['This is the Dog encounter. Fight him', 'This is the strength Option', 'this is the Intelligence Option', 'This is the agility option', true];
 var hipsterEncounter = ['You encounter a hipster ghost. He annoyingly bumps into you. Your life will be taken from you (again), unless you answer this one correct', 'This is the strength Option', 'this is the Intelligence Option', 'This is the agility option', true];
 var firstDropEncounter = ['The hipster drops some items for you. You can only carry one. Choose wisely', 'Old Timey Straight Razor', 'Die Verwandlung by Franz Kafka', 'Ear Gauges', false];
 var enviroOneEncounter = ['This is the event for the skeleton', 'This is the strength Option', 'this is the Intelligence Option', 'This is the agility option', false];
@@ -35,13 +35,13 @@ var finalBossEncounter = ['Welp, this is it. It doesnt look like your going to m
 encounterArray.push(dogEncounter, hipsterEncounter, firstDropEncounter, enviroOneEncounter, skeletonEncounter, secondDropEncounter, enviroTwoEncounter, ghostlyEncounter, thirdDropEncounter, finalBossEncounter);
 var Doggo = new Character('Doggo', 2, 2, 2, 20, true, 'assets/doggo.png', 'music/battleOne.mp3');
 var hipsterGhost = new Character('Hipster Ghost', 3, 3, 3, 50, true, 'assets/hipster.png', 'music/battleOne.mp3');
-var firstItemDrop = new Character('Item Drop One', 506, 507, 508, 1, false);
-var enviroOne = new Character('Skeleton Trap', 500, 501, 502, 1, false);
+var firstItemDrop = new Character('Item Drop One', 506, 507, 508, 1, false, null, 'music/idle.wav');
+var enviroOne = new Character('Skeleton Trap', 500, 501, 502, 1, false, null, 'music/idle.wav');
 var Skeleton = new Character('Skeleton', 10, 7, 5, 20, true, 'assets/skullex.png', 'music/battleTwo.mp3');
-var secondItemDrop = new Character('Item Drop Two', 509, 5010, 5011, 1, false);
-var enviroTwo = new Character('Second Environment', 503, 504, 505, 1, false);
+var secondItemDrop = new Character('Item Drop Two', 509, 5010, 5011, 1, false, null, 'music/idle.wav');
+var enviroTwo = new Character('Second Environment', 503, 504, 505, 1, false, null, 'music/idle.wav');
 var ghostly = new Character('Ghostly', 7, 14, 12, 22, true, 'assets/ghostly.png', 'music/battleTwo.mp3');
-var thirdItemDrop = new Character('Item Drop Three', 5012, 5013, 5014, 1, false);
+var thirdItemDrop = new Character('Item Drop Three', 5012, 5013, 5014, 1, false, null, 'music/idle.wav');
 var finalBoss = new Character('Chaos Lord', 20, 13, 17, 30, true, 'assets/gho.png', 'music/boss.wav');
 enemyCharacter.push(Doggo, hipsterGhost, firstItemDrop, enviroOne, Skeleton, secondItemDrop, enviroTwo, ghostly, thirdItemDrop, finalBoss);
 
