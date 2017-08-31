@@ -4,7 +4,7 @@ function Character (name, str, agil, int, hp, ghostType){
   this.agil = agil;
   this.int = int;
   this.hp = hp;
-  this.ghostType = 0;
+  this.ghostType = '';
   this.totalLvl = 0;
   this.backpack = [];
 }
@@ -50,19 +50,19 @@ function startGame(event){
     mainCharacter.int = genStats(3, 1);
     mainCharacter.agil = genStats(7, 5);
     mainCharacter.hp = genStats(30, 25);
-    mainCharacter.ghostType = 0;
+    mainCharacter.ghostType = 'assets/ghostOne.png';
   }else if(userChar == 'ghostTwo'){
     mainCharacter.str = genStats(3, 1);
     mainCharacter.int = genStats(7, 5);
     mainCharacter.agil = genStats(5, 3);
     mainCharacter.hp = genStats(28, 23);
-    mainCharacter.ghostType = 1;
+    mainCharacter.ghostType = 'assets/ghostThree.png';
   }else if(userChar == 'ghostThree'){
     mainCharacter.str = genStats(9, 7);
     mainCharacter.int = genStats(3, 1);
     mainCharacter.agil = genStats(3, 1);
     mainCharacter.hp = genStats(35, 30);
-    mainCharacter.ghostType = 2;
+    mainCharacter.ghostType = 'assets/ghostTwo.png';
   }
   mainCharacter.totalLvl = (mainCharacter.str + mainCharacter.int + mainCharacter.agil + mainCharacter.hp);
   console.log(mainCharacter.totalLvl);

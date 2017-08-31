@@ -10,7 +10,7 @@ function enviroEventFunct(inputStat, compareStat, charOne, charTwo){
   }
   else if (charTwo[inputStat] === 501) {
     if(charOne[inputStat] > 6){
-      questionCounter += 1;
+      questionCounter += 2;
       displayText('You manage to get away from the skeleton! Onward!');
       //skip encounter, no level up
     }else{

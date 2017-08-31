@@ -11,11 +11,6 @@ function updateHealth(healthStart){
 }
 function initialHealth(){
   var hitPointsOuterDiv = document.getElementsByClassName('hitPointsBox')[0];
-  var newMaxHealth = document.createElement('div');
-  userCharacter.maxHealth = userCharacter.hp;
-  newMaxHealth.innerText = userCharacter.maxHealth;
-  newMaxHealth.setAttribute('class', 'maxHP');
-  hitPointsOuterDiv.appendChild(newMaxHealth);
   var newHealth = document.createElement('div');
   newHealth.innerText = userCharacter.hp;
   newHealth.setAttribute('class', 'currentHP');
