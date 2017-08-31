@@ -13,7 +13,7 @@ function fightCheck (charOne, charTwo, stat){
 }
 
 function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
-  if(encounterArray[questionCounter][4]){
+  if(enemyCharacter[questionCounter].enemy){
     damage = 0;
     var preFightHealth = userCharacter.hp;
     var enemyPreFight = enemyCharacter[questionCounter].hp;
@@ -95,5 +95,8 @@ function enemyTurnFunction(){
 function continueToQuestion(){
   clearTimeout();
   questionCounter += 1;
+  if(enemyCharacter[questionCounter].enemy){
+    initialEnemyHealth();
+  }
   changeQuestion(encounterArray[questionCounter][0], encounterArray[questionCounter][1], encounterArray[questionCounter][2], encounterArray[questionCounter][3], encounterArray[questionCounter][4]);
 }
