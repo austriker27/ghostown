@@ -49,22 +49,28 @@ function itemEventFunction (inputStat, compareStat, charOne, charTwo){
     userCharacter.backpack.push(skull.imgNum);
     displayText('You convene with the skull, gaining its former life\'s wisdom. It\'s quite cumbersome.');
   }else if(charTwo[inputStat] === 5011){
+    var originalHealth = userCharacter.hp;
     userCharacter[grannyApple.posSkill] += grannyApple.buff;
     userCharacter[grannyApple.negSkill] -= grannyApple.debuff;
     userCharacter[grannyApple.secPosSkill] += grannyApple.secBuff;
     userCharacter.backpack.push(grannyApple.imgNum);
+    updateHealth(originalHealth);
     displayText('You eat the apple and feel better. You\'re not a huge fan of granny smiths though.');
   }else if(charTwo[inputStat] === 5012){
+    var originalHealth = userCharacter.hp;
     userCharacter[gasCloud.posSkill] += gasCloud.buff;
     userCharacter[gasCloud.negSkill] -= gasCloud.debuff;
     userCharacter[gasCloud.secPosSkill] += gasCloud.secBuff;
     userCharacter.backpack.push(gasCloud.imgNum);
+    updateHealth(originalHealth);
     displayText('Why are you touching strange clouds??? You should have eaten the apple. You feel weaker.');
   }else if(charTwo[inputStat] === 5013){
+    var originalHealth = userCharacter.hp;
     userCharacter[fujiApple.posSkill] += fujiApple.buff;
     userCharacter[fujiApple.negSkill] -= fujiApple.debuff;
     userCharacter[fujiApple.secPosSkill] += fujiApple.secBuff;
     userCharacter.backpack.push(fujiApple.imgNum);
+    updateHealth(originalHealth);
     displayText('You eat the fuji apple, which you find delicious.');
   }else if(charTwo[inputStat] === 5014){
     userCharacter[skateboard.posSkill] += skateboard.buff;
