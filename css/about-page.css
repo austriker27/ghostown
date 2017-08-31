@@ -17,7 +17,7 @@
 }
 
 @keyframes title {
-  25% {top: 20%;}
+  25% {top: 150%;}
   35% {transform: rotate(10deg);}
   50% {top: -8%;}
   55% {transform: rotate(-10deg);}
