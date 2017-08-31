@@ -16,6 +16,7 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
   if(encounterArray[questionCounter][4]){
     damage = 0;
     var preFightHealth = userCharacter.hp;
+    var enemyPreFight = enemyCharacter[questionCounter].hp;
     charTwo.totalLvl = charTwo.str + charTwo.int + charTwo.agil;
     userCharacter.totalLvl = userCharacter.str + userCharacter.int + userCharacter.agil + userCharacter.hp;
     function dndSim(){var num = Math.floor(Math.random() * (21 - 1) + 1);
@@ -67,6 +68,7 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
     }
     charTwo.hp -= damage;
     updateHealth(preFightHealth);
+    enemyHealth(enemyPreFight);
     if(enemyTurn){
       enemyTurn = false;
     }else{
