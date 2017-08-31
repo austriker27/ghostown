@@ -98,3 +98,43 @@ li:hover {
               5px 5px #aaff01,
               6px 6px #aaff01;
 }
+
+.hitPointsBox {
+  z-index: 1;
+  font-family: 'Press Start 2P', cursive;
+  top: 10%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  left: 15%;
+}
+
+.maxHP {
+  font-size: 1.3em;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.2em;
+  padding-top: 0.5em;
+  animation: maxAdd 0.5s forwards;
+  animation-iteration-count: 1;
+  animation-delay: 1s;
+}
+
+@keyframes maxAdd {
+  0% {transform: scale(2);}
+  0% {color: green;}
+  100% {transform: scale(1);}
+  100% {color: white;}
+}
+
+.currentHP {
+  padding-top: 0.5em;
+  animation: newHP 0.5s forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes newHP {
+  0% {transform: scale(2);}
+  0% {color: red;}
+  100% {transform: scale(1);}
+  100% {color: white;}
+}
