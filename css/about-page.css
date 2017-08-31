@@ -17,7 +17,7 @@
 }
 
 @keyframes title {
-  25% {top: 20%;}
+  25% {top: 150%;}
   35% {transform: rotate(10deg);}
   50% {top: -8%;}
   55% {transform: rotate(-10deg);}
@@ -30,6 +30,7 @@ body {
   background: #aa00ff;
   min-width: 900px;
   margin: 0;
+  color: rgb(209, 209, 209);
 }
 
 h2 {
@@ -59,7 +60,7 @@ h2 {
   float: left;
   line-height: 1.8em;
   font-size: 16px;
-  color: rgb(29, 29, 29);
+  color: rgb(209, 209, 209);
   text-align: justify;
   background-color: rgb(160, 0, 255);
   border-radius: 20px;
@@ -73,9 +74,7 @@ h2 {
 
 .author img {
   border-radius: 80px;
-  position: relative;
-  top: 0px;
-  left: 0px;
+  padding: 2px 2px 2px 2px;
 }
 
 .clearFloat {
@@ -92,10 +91,11 @@ h2 {
 .socialMediaBtns {
   display: inline;
   width: 35%;
-  margin: 10% 0% 1% 0%;
+  margin: 10% 0% 1% 2%;
   float: right;
 }
 
-.socialMediaBtns img {
+.socialMediaBtns i {
   padding: 5px 5px 5px 5px;
+  color: white;
 }
