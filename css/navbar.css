@@ -1,3 +1,26 @@
+.dropdown {
+  position: absolute;
+  display: block;
+  background: #ff00aa;
+  width: 300px;
+  z-index: 1;
+  font-family: 'Special Elite', cursive;
+  border: 1px solid black;
+  right: 0;
+  border-bottom-left-radius: 10px;
+  animation: dropdown 1s forwards;
+  top: -150%;
+}
+
+@keyframes dropdown {
+  100% {top: 3%;}
+}
+
+.dropdown p {
+  padding-top: 0.5em;
+  border-top: 1px solid black;
+}
+
 .navBar {
   top: -30%;
   padding-top: 2em;
