@@ -4,6 +4,14 @@ function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn, e
   while (textField.hasChildNodes()) {
     textField.removeChild(textField.lastChild);
   };
+  var enemyAssetDiv = document.getElementsByClassName('enemy')[0];
+  var enemyAsset = document.getElementById('enemy');
+  enemyAssetDiv.removeChild(enemyAsset);
+  var newEnemy = enemyCharacter[questionCounter].ghostType;
+  var newEnemyAsset = document.createElement('img');
+  newEnemyAsset.setAttribute('id', 'enemy');
+  newEnemyAsset.setAttribute('src', newEnemy);
+  enemyAssetDiv.appendChild(newEnemyAsset);
   var speakingField = document.createElement('h2');
   textField.appendChild(speakingField);
   var promptField = document.createElement('p');
