@@ -109,23 +109,6 @@ li:hover {
   left: 15%;
 }
 
-.maxHP {
-  font-size: 1.3em;
-  border-top: 1px solid white;
-  padding-bottom: 0.2em;
-  padding-top: 0.5em;
-  animation: maxAdd 0.5s forwards;
-  animation-iteration-count: 1;
-  animation-delay: 1s;
-}
-
-@keyframes maxAdd {
-  0% {transform: scale(2);}
-  0% {color: green;}
-  100% {transform: scale(1);}
-  100% {color: white;}
-}
-
 .currentHP {
   padding-top: 0.5em;
   animation: newHP 0.5s forwards;
@@ -133,6 +116,29 @@ li:hover {
 }
 
 @keyframes newHP {
+  0% {transform: scale(2);}
+  0% {color: red;}
+  100% {transform: scale(1);}
+  100% {color: white;}
+}
+
+.enemyHPBox {
+  z-index: 1;
+  font-family: 'Press Start 2P', cursive;
+  top: 10%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  right: 20%;
+}
+
+.currentEnemyHp {
+  padding-top: 0.5em;
+  animation: newEnemyHP 0.5s forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes newEnemyHP {
   0% {transform: scale(2);}
   0% {color: red;}
   100% {transform: scale(1);}
