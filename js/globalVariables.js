@@ -15,7 +15,7 @@ function Character (name, str, agil, int, hp, enemy, ghostType, audioFilePath){
     var enemyAudioFile = this.audioFilePath;
     grabBackgroundMusicAudio.setAttribute('src', this.audioFilePath);
   };
-  this.enemyBackgroundMusicChange();
+  // this.enemyBackgroundMusicChange();
 }
 
 var enemyTurn = false;
