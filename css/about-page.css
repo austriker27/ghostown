@@ -1,7 +1,7 @@
 #ghosTown {
   text-align: center;
   position: relative;
-  /*top: -50%;*/
+  top: -30%;
   margin: 3%;
   font-size: 10em;
   font-family: 'Freckle Face', cursive;
@@ -18,18 +18,22 @@
 }
 
 @keyframes title {
-  from {
+  /*from {
     margin-top: -110%;
   }
 
   to {
     margin-top: 3%;
-  }
-  /*25% {top: 150%;}
+    position: relative;
+  }*/
+  25% {top: 150%;}
   35% {transform: rotate(10deg);}
-  50% {top: -8%;}
+  50% {top: 10%;}
   55% {transform: rotate(-10deg);}
-  100% {top: 3%;}*/
+  100% {
+    top: 3%;
+    position: relative;
+  }
 }
 
 
