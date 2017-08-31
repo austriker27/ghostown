@@ -1,6 +1,5 @@
 var userCharacter = JSON.parse(localStorage.character);
 
-
 function Character (name, str, agil, int, hp, enemy, prestory, ghostType, audioFilePath){
   this.name = name;
   this.str = str;
@@ -67,3 +66,4 @@ function appendUserGhost(){
 }
 appendUserGhost();
 displayStory(enemyCharacter[0].prestory[0][0]);
+enemyDeathHealth();
