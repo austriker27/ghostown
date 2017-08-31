@@ -9,6 +9,29 @@ function updateHealth(healthStart){
     HPBox.appendChild(newHealth);
   }
 }
+function enemyHealth(healthStart){
+  if(enemyCharacter[questionCounter].hp !== healthStart){
+    var enemyOldHP = document.getElementsByClassName('enemyHP')[0];
+    var enemyHPBox = document.getElementsByClassName('enemyHPBox')[0];
+    enemyHPBox.removeChild(enemyOldHP);
+    var newEnemyHP = document.createElement('div');
+    newEnemyHP.innerText = enemyCharacter[questionCounter].hp;
+    newEnemyHP.setAttribute('class', 'enemyHP');
+    enemyHPBox.appendChild(newEnemyHP);
+  }
+}
+function initialEnemyHealth(){
+  if(document.getElementsByClassName('enemyHP')[0]){
+    var enemyOldHP = document.getElementsByClassName('enemyHP')[0];
+    var enemyHPBox = document.getElementsByClassName('enemyHPBox')[0];
+    enemyHPBox.removeChild(enemyOldHP);
+  }
+  var enemyHPBox = document.getElementsByClassName('enemyHPBox')[0];
+  var initalEnemyHP = document.createElement('div');
+  initalEnemyHP.innerText = enemyCharacter[questionCounter].hp;
+  initalEnemyHP.setAttribute('class', 'enemyHP');
+  enemyHPBox.appendChild(initalEnemyHP);
+}
 function initialHealth(){
   var hitPointsOuterDiv = document.getElementsByClassName('hitPointsBox')[0];
   var newHealth = document.createElement('div');

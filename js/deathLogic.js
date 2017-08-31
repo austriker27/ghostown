@@ -5,11 +5,13 @@ function deathCheck(charOne, charTwo){
   if (charTwo.hp <= 0 && userCharacter.hp > 0){
     var display = charTwo.name + ' soul is at rest. R.I.P';
     enemyTurn = false;
+    enemyDeathHealth();
     displayText(display);
   }
   if (charOne.hp <= 0 && userCharacter.hp > 0){
     var display = charOne.name + ' soul is at rest. R.I.P';
     enemyTurn = false;
+    enemyDeathHealth();
     displayText(display);
   }
 }
@@ -48,7 +50,11 @@ function characterDeath(){
   promptField.addEventListener('click', resetGame);
   clearTimeout();
 }
-
+function enemyDeathHealth(){
+  var enemyOldHP = document.getElementsByClassName('enemyHP')[0];
+  var enemyHPBox = document.getElementsByClassName('enemyHPBox')[0];
+  enemyHPBox.removeChild(enemyOldHP);
+}
 function resetGame(event){
   localStorage.clear;
   window.open('index.html','_self');
