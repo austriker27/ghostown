@@ -16,6 +16,7 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
   // if(compareStat == inputStat){
   if(encounterArray[questionCounter][4]){
     damage = 0;
+    var preFightHealth = userCharacter.hp;
     charTwo.totalLvl = charTwo.str + charTwo.int + charTwo.agil;
     userCharacter.totalLvl = userCharacter.str + userCharacter.int + userCharacter.agil + userCharacter.hp;
     function dndSim(){var num = Math.floor(Math.random() * (21 - 1) + 1);
@@ -51,7 +52,7 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
       damage = 10;
       charOne.hp -= damage;
       display = charOne.name + '\'s hit was so bad that they hurt themselves...';
-      damageDisplay(display);
+      damage = 0;
     }if(defRoll === 20){
       damage = 0;
       display = charTwo.name + '\'s defense overpowered ' + charOne.name + '\'s attack.';
@@ -65,6 +66,7 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
       display = charOne.name + '\'s attack power was matched by ' + charTwo.name + '\'s defenses. Normal damage was dealt.';
     }
     charTwo.hp -= damage;
+    updateHealth(preFightHealth);
     if(enemyTurn){
       enemyTurn = false;
     }else{
@@ -79,38 +81,10 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
   }
 }
 
-function damageDisplay(display){
-  var textField = document.getElementsByClassName('textField')[0];
-  while (textField.hasChildNodes()) {
-    textField.removeChild(textField.lastChild);
-  };
-  var speakingField = document.createElement('h2');
-  textField.appendChild(speakingField);
-  var promptField = document.createElement('p');
-  promptField.innerText = display;
-  textField.appendChild(promptField);
-  var unList = document.createElement('ul');
-  textField.appendChild(unList);
-  var continueButton = document.createElement('li');
-  continueButton.innerText = 'Continue';
-  continueButton.setAttribute('id', 'continueButton');
-  textField.appendChild(continueButton);
-  if(enemyTurn){
-    continueButton.removeEventListener('click', damageRedisplayQuestion);
-    continueButton.addEventListener('click', enemyTurnFunction);
-  }else{
-    continueButton.removeEventListener('click', enemyTurnFunction);
-    continueButton.addEventListener('click', damageRedisplayQuestion);
-  };
-}
 function enemyTurnFunction(){
   var statsArray = ['str', 'int', 'agil'];
   var randNum = Math.floor(Math.random() * statsArray.length);
   fightCheck(enemyCharacter[questionCounter], userCharacter, statsArray[randNum]);
-}
-function damageRedisplayQuestion(event){
-  clearTimeout();
-  sameQuestion(encounterArray[questionCounter][0], encounterArray[questionCounter][1], encounterArray[questionCounter][2], encounterArray[questionCounter][3], encounterArray[questionCounter][4]);
 }
 
 function continueToQuestion(){
