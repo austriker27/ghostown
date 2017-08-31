@@ -69,3 +69,4 @@ function damageRedisplayQuestion(event){
   sameQuestion(encounterArray[questionCounter][0], encounterArray[questionCounter][1], encounterArray[questionCounter][2], encounterArray[questionCounter][3], encounterArray[questionCounter][4]);
 }
 initialHealth();
+initialEnemyHealth();
