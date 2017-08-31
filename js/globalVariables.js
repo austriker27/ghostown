@@ -36,3 +36,12 @@ var ghostly = new Character('Ghostly', 7, 14, 12, 22, 'assets/ghostly.png');
 var thirdItemDrop = new Character('Item Drop Three', 5012, 5013, 5014, 1);
 var finalBoss = new Character('Chaos Lord', 20, 13, 17, 30, 'assets/gho.png');
 enemyCharacter.push(Doggo, hipsterGhost, firstItemDrop, enviroOne, Skeleton, secondItemDrop, enviroTwo, ghostly, thirdItemDrop, finalBoss);
+
+function appendUserGhost(){
+  var userAsset = document.createElement('img');
+  userAsset.setAttribute('id', 'hero');
+  userAsset.setAttribute('src', userCharacter.ghostType);
+  var assetHolder = document.getElementsByClassName('hero')[0];
+  assetHolder.appendChild(userAsset);
+}
+appendUserGhost();

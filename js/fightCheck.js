@@ -13,7 +13,6 @@ function fightCheck (charOne, charTwo, stat){
 }
 
 function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
-  // if(compareStat == inputStat){
   if(encounterArray[questionCounter][4]){
     damage = 0;
     var preFightHealth = userCharacter.hp;
@@ -28,11 +27,9 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
     var powerDifference = 0;
     powerDifference = attackPower - defensePower;
     if (powerDifference < 0){
-      var display = charOne.name + '\'s move fails to deal any damage';
-    }else if(powerDifference === 0){
-      var damage = 5;
+      damage = 5;
       var display = charOne.name + '\'s attack did very little damage.';
-    }else if(powerDifference > 0){
+    }else if(powerDifference >= 0){
       var damage = 10;
       var display = charOne.name + '\'s attack was somewhat effective.';
       if(powerDifference > 3){
@@ -47,18 +44,21 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
       }
     }if (attackRoll === 20){
       damage *= 2;
-      display = charOne.name + ' landed a critical hit!';
+      var concatdisplay = ' It was a critical hit!';
     }else if(attackRoll === 1){
-      damage = 10;
+      damage = 5;
       charOne.hp -= damage;
       display = charOne.name + '\'s hit was so bad that they hurt themselves...';
       damage = 0;
+    }else if(attackRoll === 2){
+      damage = 0;
+      display = charOne.name + '\'s attack fails to do any damage.';
     }if(defRoll === 20){
       damage = 0;
       display = charTwo.name + '\'s defense overpowered ' + charOne.name + '\'s attack.';
     }else if(defRoll === 1){
       damage *= 1.7;
-      display = charTwo.name + 'was caught off guard. ' + charOne.name + '\'s attack did extra damage.';
+      var concatdisplay = ' ' + charTwo.name + ' was caught off guard. ' + charOne.name + '\'s attack did extra damage.';
     }if (attackRoll === 20 && defRoll === 1){
       display = charOne.name + ' made a very heavy blow to ' + charTwo.name + '.';
     }else if(attackRoll === 20 && defRoll === 20){
@@ -71,6 +71,9 @@ function fightCheckStatType(inputStat, compareStat, charOne, charTwo){
       enemyTurn = false;
     }else{
       enemyTurn = true;
+    }
+    if(concatdisplay){
+      display += concatdisplay;
     }
     damageDisplay(display);
   }

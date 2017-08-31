@@ -111,7 +111,7 @@ li:hover {
 
 .maxHP {
   font-size: 1.3em;
-  border-bottom: 1px solid white;
+  border-top: 1px solid white;
   padding-bottom: 0.2em;
   padding-top: 0.5em;
   animation: maxAdd 0.5s forwards;
