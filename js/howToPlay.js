@@ -2,6 +2,7 @@
 // append menus to the how to hover
 function howToMenu() {
   var howToPlay1 = document.createElement('p');
+  // howToPlay1.setAttribute('class', howToItem);
   howToPlay1.innerText = 'Pick the Ghostie that\'s right for you and name it!';
   mouseOverHowToPlay.appendChild(howToPlay1);
 
