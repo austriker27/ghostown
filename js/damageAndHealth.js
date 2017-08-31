@@ -14,6 +14,7 @@ function enemyHealth(healthStart){
     var enemyOldHP = document.getElementsByClassName('enemyHP')[0];
     var enemyHPBox = document.getElementsByClassName('enemyHPBox')[0];
     enemyHPBox.removeChild(enemyOldHP);
+    enemyHPBox.innerText = 'HP';
     var newEnemyHP = document.createElement('div');
     newEnemyHP.innerText = enemyCharacter[questionCounter].hp;
     newEnemyHP.setAttribute('class', 'enemyHP');
@@ -27,6 +28,7 @@ function initialEnemyHealth(){
     enemyHPBox.removeChild(enemyOldHP);
   }
   var enemyHPBox = document.getElementsByClassName('enemyHPBox')[0];
+  enemyHPBox.innerText = 'HP';
   var initalEnemyHP = document.createElement('div');
   initalEnemyHP.innerText = enemyCharacter[questionCounter].hp;
   initalEnemyHP.setAttribute('class', 'enemyHP');

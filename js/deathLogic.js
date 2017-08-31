@@ -30,7 +30,7 @@ function displayText(display){
   textField.appendChild(unList);
   var choiceOne = document.createElement('li');
   choiceOne.innerText = 'Continue';
-  choiceOne.setAttribute('id', 'strChoice');
+  choiceOne.setAttribute('id', 'continueButton');
   textField.appendChild(choiceOne);
   choiceOne.addEventListener('click', continueToQuestion);
   clearTimeout();
@@ -53,7 +53,8 @@ function characterDeath(){
 function enemyDeathHealth(){
   var enemyOldHP = document.getElementsByClassName('enemyHP')[0];
   var enemyHPBox = document.getElementsByClassName('enemyHPBox')[0];
-  enemyHPBox.removeChild(enemyOldHP);
+  enemyHPBox.innerText = '';
+  // enemyHPBox.removeChild(enemyOldHP);
 }
 function resetGame(event){
   localStorage.clear;
