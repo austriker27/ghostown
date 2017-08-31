@@ -9,6 +9,9 @@ function storyProgressFunction(event){
     if(enemyCharacter[questionCounter].enemy){
       initialEnemyHealth();
     }
+    if(questionCounter === 0){
+      enemyCharacter[0].enemyBackgroundMusicChange();
+    }
     changeQuestion(encounterArray[questionCounter][0], encounterArray[questionCounter][1], encounterArray[questionCounter][2], encounterArray[questionCounter][3], encounterArray[questionCounter][4]);
   }
 }
