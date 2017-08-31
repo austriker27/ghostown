@@ -69,4 +69,4 @@ var storyGho9 = ['Well… It looks like you’ve defeated Chaos! There is nobody
 var storyGho10 = ['And what’s beyond the fog? What comes after Chaos is defeated? Well, you see a figure off in the distance. It looks like a mirage, and as you move closer to it, it moves closer to you. Eventually you come face to face and realize that it’s actually a mirror image of yourself.'];
 var storyGho11 = ['You reach your little ghostie-arm out and make contact with the figure, who is also reaching out their little arm to you. You make contact, but it’s more like touching your left arm to your right arm, only you apparently absorb into each other.'];
 var storyGho12 = ['As you reach further into yourself and out of GhosTown, all the dread and frustration leaves you… there is just light…'];
-var storyGho13 = ['THE END! Thanks for playing.'];
+var storyGho13 = ['THE END! Thanks for playing!'];
