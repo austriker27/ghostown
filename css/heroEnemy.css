@@ -27,7 +27,6 @@
   opacity: 0;
   animation: enemy 1s forwards;
   animation-iteration-count: 1;
-  animation-delay: 2.5s;
 }
 
 @keyframes enemy {
@@ -48,7 +47,6 @@
   opacity: 0;
   animation: enemyBoss 1s forwards;
   animation-iteration-count: 1;
-  animation-delay: 2.5s;
 }
 
 @keyframes enemyBoss {
@@ -68,7 +66,6 @@
   opacity: 0;
   animation: ghostly 1s forwards;
   animation-iteration-count: 1;
-  animation-delay: 2.5s;
 }
 
 @keyframes ghostly {
