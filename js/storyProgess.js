@@ -51,4 +51,19 @@ function youWin(){
   promptField.setAttribute('class', 'gameOver');
   promptField.addEventListener('click', resetGame);
   textField.appendChild(promptField);
+  var twitterDiv = document.createElement('div');
+  twitterDiv.setAttribute('class', 'finalScoreTwitter');
+  var twitterButton = document.createElement('a');
+  twitterButton.setAttribute('class', 'twitter-share-button');
+  twitterButton.setAttribute('href', 'https://twitter.com/share');
+  twitterButton.setAttribute('data-size', 'large');
+  var twitterMessage = 'I just escaped @GhostownGame! I got ' + totalScore + ' points! Can you survive? Try at.';
+  twitterButton.setAttribute('data-text', twitterMessage);
+  twitterButton.setAttribute('data-url', 'http://www.ghostowngame.com');
+  twitterButton.setAttribute('data-hashtags', 'game,ghostown');
+  twitterButton.setAttribute('data-related', 'twitterapi,ghostowngame');
+  twitterButton.innerText = 'Post a Tweet!';
+  twitterDiv.appendChild(twitterButton);
+  var bodyElm = document.getElementsByTagName('body')[0];
+  bodyElm.appendChild(twitterDiv);
 }
