@@ -38,7 +38,12 @@ function displayText(display){
   choiceOne.innerText = 'Continue';
   choiceOne.setAttribute('id', 'continueButton');
   textField.appendChild(choiceOne);
-  choiceOne.addEventListener('click', continueToQuestion);
+  if(questionCounter < 10){
+    choiceOne.addEventListener('click', continueToQuestion);
+  }else{
+    choiceOne.removeEventListener('click', continueToQuestion);
+    choiceOne.addEventListener('click', endOfGame);
+  }
   clearTimeout();
 }
 
@@ -53,6 +58,9 @@ function characterDeath(){
   promptField.innerText = 'Game OVER';
   promptField.setAttribute('class', 'gameOver');
   textField.appendChild(promptField);
+  var grabBackgroundMusicAudio = document.getElementById('audio');
+  var enemyAudioFile = 'music/gameOver.wav';
+  grabBackgroundMusicAudio.setAttribute('src', enemyAudioFile);
   promptField.addEventListener('click', resetGame);
   clearTimeout();
 }
@@ -65,7 +73,6 @@ function enemyDeathHealth(){
   var enemyOldHP = document.getElementsByClassName('enemyHP')[0];
   var enemyHPBox = document.getElementsByClassName('enemyHPBox')[0];
   enemyHPBox.innerText = '';
-  // enemyHPBox.removeChild(enemyOldHP);
 }
 function resetGame(event){
   localStorage.clear;

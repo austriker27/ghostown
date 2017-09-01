@@ -1,5 +1,3 @@
-
-//background audio plays on button click and pauses
 var music = document.getElementById('audio');
 
 function playAudio() {
