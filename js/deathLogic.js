@@ -53,6 +53,8 @@ function characterDeath(){
     textField.removeChild(textField.lastChild);
   };
   var speakingField = document.createElement('h2');
+  var totalScore = (userCharacter.str + userCharacter.agil + userCharacter.int) * 1000;
+  speakingField.innerText = userCharacter.name + '\'s score was: ' + totalScore;
   textField.appendChild(speakingField);
   var promptField = document.createElement('p');
   promptField.innerText = 'Game OVER';
@@ -62,6 +64,21 @@ function characterDeath(){
   var enemyAudioFile = 'music/gameOver.wav';
   grabBackgroundMusicAudio.setAttribute('src', enemyAudioFile);
   promptField.addEventListener('click', resetGame);
+  var twitterDiv = document.createElement('div');
+  twitterDiv.setAttribute('class', 'finalScoreTwitter');
+  var twitterButton = document.createElement('a');
+  twitterButton.setAttribute('class', 'twitter-share-button');
+  twitterButton.setAttribute('href', 'https://twitter.com/share');
+  twitterButton.setAttribute('data-size', 'large');
+  var twitterMessage = 'I wasnt able to escape @GhostownGame. I got ' + totalScore + ' points. Can you survive? Try at.';
+  twitterButton.setAttribute('data-text', twitterMessage);
+  twitterButton.setAttribute('data-url', 'http://www.ghostowngame.com');
+  twitterButton.setAttribute('data-hashtags', 'gamedev, indiedev, ghostown');
+  twitterButton.setAttribute('data-related', 'twitterapi,ghostowngame');
+  twitterButton.innerText = 'Post a Tweet!';
+  twitterDiv.appendChild(twitterButton);
+  textField.appendChild(twitterDiv);
+  twttr.widgets.load();
   clearTimeout();
 }
 function enemyDeathHealth(){
