@@ -25,6 +25,12 @@
   100% {top: 3%;}
 }
 
+.twitterBtn {
+  position: absolute;
+  top: 8%;
+  left: 1%;
+  z-index: 20;
+}
 
 body {
   font-family: 'Special Elite', cursive;

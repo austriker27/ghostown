@@ -12,9 +12,9 @@ var kafka = new ItemConstructor(3, 'int', 0, null, 1);
 var gauges = new ItemConstructor(2, 'agil', 2, 'int', 2);
 var hammer = new ItemConstructor(6, 'str', 3, 'agil', 3);
 var skull = new ItemConstructor(4, 'int', 2, 'agil', 4);
-var grannyApple = new ItemConstructor(4, 'hp', 0, null, 5);
+var grannyApple = new ItemConstructor(10, 'hp', 0, null, 5);
 var gasCloud = new ItemConstructor(0, null, 3, 'hp', 6);
-var fujiApple = new ItemConstructor(6, 'hp', 0, null, 7);
+var fujiApple = new ItemConstructor(15, 'hp', 0, null, 7);
 var skateboard = new ItemConstructor(4, 'agil', 0, null, 8);
 
 function itemEventFunction (inputStat, compareStat, charOne, charTwo){
@@ -77,6 +77,6 @@ function itemEventFunction (inputStat, compareStat, charOne, charTwo){
     userCharacter[skateboard.negSkill] -= skateboard.debuff;
     userCharacter[skateboard.secPosSkill] += skateboard.secBuff;
     userCharacter.backpack.push(skateboard.imgNum);
-    displayText('You shred some gnar. Your the fasted ghost in this town.');
+    displayText('You shred some gnar. You\'re the fasted ghost in this town.');
   }
 }

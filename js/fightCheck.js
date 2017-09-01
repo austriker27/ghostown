@@ -95,9 +95,8 @@ function enemyTurnFunction(){
 function continueToQuestion(){
   clearTimeout();
   questionCounter += 1;
-  // if(enemyCharacter[questionCounter].enemy){
-  //   initialEnemyHealth();
-  enemyCharacter[questionCounter].enemyBackgroundMusicChange();
+  if(questionCounter < 10){
+    enemyCharacter[questionCounter].enemyBackgroundMusicChange();
+  }
   displayStory(enemyCharacter[questionCounter].prestory[storyCounter][0]);
-  // changeQuestion(encounterArray[questionCounter][0], encounterArray[questionCounter][1], encounterArray[questionCounter][2], encounterArray[questionCounter][3], encounterArray[questionCounter][4]);
 }

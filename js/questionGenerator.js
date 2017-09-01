@@ -16,9 +16,6 @@ function changeQuestion(questionText, choiceOneIn, choiceTwoIn, choiceThreeIn, e
     newEnemyAsset.setAttribute('src', newEnemy);
     enemyAssetDiv.appendChild(newEnemyAsset);
   }
-  // if(enemyCharacter[questionCounter][4]){
-  //   initialEnemyHealth();
-  // }
   var speakingField = document.createElement('h2');
   textField.appendChild(speakingField);
   var promptField = document.createElement('p');
@@ -103,4 +100,3 @@ function agilListener(event){
   event.preventDefault();
   fightCheck(userCharacter, enemyCharacter[questionCounter], 'agil');
 }
-// changeQuestion(encounterArray[0][0], encounterArray[0][1], encounterArray[0][2], encounterArray[0][3], encounterArray[0][4]);

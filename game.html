@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     <link rel="shortcut icon" href="assets/ghostTwo.png"/>
     <link rel="stylesheet" href="css/bars.css" type="text/css"/>
     <link rel="stylesheet" href="css/title.css" type="text/css"/>
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="css/audioBtn.css" type="text/css"/>
     <link rel="stylesheet" href="css/game-style.css" type="text/css"/>
     <link rel="stylesheet" href="css/heroEnemy.css" type="text/css"/>
+    <link rel="stylesheet" href="css/game-twitterBtn.css" type="text/css"/>
     <title>GhosTown</title>
     <link href="https://fonts.googleapis.com/css?family=Freckle+Face" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
@@ -19,7 +21,7 @@
   </head>
   <body>
 
-  <!-- background audio: button to pause play -->
+
   <button id="pButton" class="pause" onclick="playAudio()"></button>
   <audio id="audio" src="music/idle.wav" loop autoplay></audio>
 
@@ -29,8 +31,7 @@
     <header class="navBar"><a href="about.html" class="about">About</a><a class="howTo">How To Play</a></header>
 
     <div class="hitPointsBox">HP
-      <!-- <div class="maxHP">50</div>
-      <div class="currentHP">35</div> -->
+
     </div>
     <div class="enemyHPBox">HP
 
@@ -38,12 +39,11 @@
 
     <div class="hero"></div>
     <div class="enemy"></div>
-<!-- <img id='enemy' src="assets/doggo.png" /> -->
+
     <div class="container">
-      <!-- The Image animations go here -->
+
       <div class="actionField"></div>
 
-      <!-- The Text and Selection goes here -->
       <div class="textField">
         <span class="counter">5</span><h2>Ghost Name:</h2>
         <p class="gameOver">Game Over!</p>
