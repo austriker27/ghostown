@@ -6,7 +6,6 @@ function enviroEventFunct(inputStat, compareStat, charOne, charTwo){
       var preFailHP = charOne.hp;
       charOne.hp -= 3;
       updateHealth(preFailHP);
-      //hurt sound effect
       displayText('You attempt to stand your ground, but you are too weak. You take some damage and prepare to fight');
     }
   }
@@ -14,7 +13,6 @@ function enviroEventFunct(inputStat, compareStat, charOne, charTwo){
     if(charOne[inputStat] > 6){
       questionCounter += 2;
       displayText('You manage to get away from the skeleton! Onward!');
-      //skip encounter, no level up
     }else{
       displayText('You attempt to run away from the skeleton, but fail. Prepare to fight');
     }
@@ -50,7 +48,6 @@ function enviroEventFunct(inputStat, compareStat, charOne, charTwo){
       displayText('You taunt ghostly, causing him to faulter and take some damage. Ghostly then charges you in a fit of rage');
     }else{
       charOne.int -= 2;
-      //hurt sound effect
       displayText('Your attempt to taunt the ghost, but fail spectaularly. You feel your intelligence has been damaged by your stupidity. Prepare to fight');
     }
   }

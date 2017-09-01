@@ -36,18 +36,15 @@ function displayStory(storyText){
   textField.appendChild(choiceOne);
   choiceOne.addEventListener('click', storyProgressFunction);
 }
-// function endOfGame(event){
-//   if(storyCounter < endingText.length - 1){
-//     storyCounter += 1;
-//     displayStory(endingText[storyCounter]);
-//   }
-// }
+
 function youWin(){
   var textField = document.getElementsByClassName('textField')[0];
   while (textField.hasChildNodes()) {
     textField.removeChild(textField.lastChild);
   };
   var speakingField = document.createElement('h2');
+  var totalScore = (userCharacter.str + userCharacter.agil + userCharacter.int + userCharacter.hp) * 1000;
+  speakingField.innerText = userCharacter.name + '\'s score was: ' + totalScore;
   textField.appendChild(speakingField);
   var promptField = document.createElement('p');
   promptField.innerText = 'You Won!';

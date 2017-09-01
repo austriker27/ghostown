@@ -16,7 +16,6 @@ function Character (name, str, agil, int, hp, enemy, prestory, ghostType, audioF
     var enemyAudioFile = this.audioFilePath;
     grabBackgroundMusicAudio.setAttribute('src', this.audioFilePath);
   };
-  // this.enemyBackgroundMusicChange();
 }
 var doggoStory = [story1, story2, story3, story4, story5, story6, storyDoggo1, storyDoggo2, storyDoggo3, storyDoggo4];
 var hipsterStory = [storyHipster1, storyHipster2, storyHipster3, storyHipster4];

@@ -73,7 +73,6 @@ function enemyDeathHealth(){
   var enemyOldHP = document.getElementsByClassName('enemyHP')[0];
   var enemyHPBox = document.getElementsByClassName('enemyHPBox')[0];
   enemyHPBox.innerText = '';
-  // enemyHPBox.removeChild(enemyOldHP);
 }
 function resetGame(event){
   localStorage.clear;
