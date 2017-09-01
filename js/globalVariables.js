@@ -53,9 +53,9 @@ var secondItemDrop = new Character('Item Drop Two', 509, 5010, 5011, 1, false, s
 var enviroTwo = new Character('Second Environment', 503, 504, 505, 1, false, enviroTwoStory, null, 'music/idle.wav');
 var ghostly = new Character('Ghostly', 7, 14, 12, 22, true, ghostlyStory, 'assets/ghostly.png', 'music/battleTwo.mp3');
 var thirdItemDrop = new Character('Item Drop Three', 5012, 5013, 5014, 1, false, thridDropStory, null, 'music/idle.wav');
-var finalBoss = new Character('Chaos Lord', 20, 13, 17, 30, true, ghoStory, 'assets/gho.png', 'music/boss.wav');
-
-enemyCharacter.push(Doggo, hipsterGhost, firstItemDrop, enviroOne, Skeleton, secondItemDrop, enviroTwo, ghostly, thirdItemDrop, finalBoss);
+var finalBoss = new Character('Gho: Chaos Lord', 20, 13, 17, 30, true, ghoStory, 'assets/gho.png', 'music/boss.wav');
+var endOfGameObject = new Character('The End', 1, 1, 1, 1, false, endingText, null, 'gameOver.wav');
+enemyCharacter.push(Doggo, hipsterGhost, firstItemDrop, enviroOne, Skeleton, secondItemDrop, enviroTwo, ghostly, thirdItemDrop, finalBoss, endOfGameObject);
 
 function appendUserGhost(){
   var userAsset = document.createElement('img');

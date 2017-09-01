@@ -57,7 +57,7 @@ var storyGho2 = ['As your ghost-body gets further and further past the tall buil
 var storyGho3 = ['Gho: “Your mission is impossible… you can never escape… it’s a question of order, not will.”'];
 var storyGho4 = ['Gho: “Your mission is impossible… you can never escape… it’s a question of order, not will.”'];
 var storyGho5 = ['What the--?! Who WAS that? You aren’t able to pinpoint where the voice is coming from -- it seemed to have come from all over, almost from the fog itself!'];
-var storyGho6 = ['Gho: “You must think of me as a jailer or judge or gangster… forcing you to do penance for the crime of dying… but that that is not so.”'];
+var storyGho6 = ['Gho: “You must think of me as a jailer or judge or gangster… forcing you to do penance for the crime of dying… but that… that is not so.”'];
 var storyGho7 = ['Gho: “It is simply the contrast of all things... light and dark… ‘is’ and ‘is-not’… even things themselves are defined by no-things.”'];
 var storyGho8 = ['Gho: “You don’t belong outside of GhosTown, little one… the darkness cannot be light… you cannot leave, you cannot live… I will make sure of it.”'];
 
@@ -67,3 +67,4 @@ var storyGho10 = ['And what’s beyond the fog? What comes after Chaos is defeat
 var storyGho11 = ['You reach your little ghostie-arm out and make contact with the figure, who is also reaching out their little arm to you. You make contact, but it’s more like touching your left arm to your right arm, only you apparently absorb into each other.'];
 var storyGho12 = ['As you reach further into yourself and out of GhosTown, all the dread and frustration leaves you… there is just light…'];
 var storyGho13 = ['THE END! Thanks for playing!'];
+var endingText = [storyGho9, storyGho10, storyGho11, storyGho12, storyGho13];

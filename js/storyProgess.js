@@ -11,8 +11,11 @@ function storyProgressFunction(event){
     }
     if(questionCounter === 0){
       enemyCharacter[0].enemyBackgroundMusicChange();
+    }if(questionCounter < 10){
+      changeQuestion(encounterArray[questionCounter][0], encounterArray[questionCounter][1], encounterArray[questionCounter][2], encounterArray[questionCounter][3], encounterArray[questionCounter][4]);
+    }else{
+      youWin();
     }
-    changeQuestion(encounterArray[questionCounter][0], encounterArray[questionCounter][1], encounterArray[questionCounter][2], encounterArray[questionCounter][3], encounterArray[questionCounter][4]);
   }
 }
 function displayStory(storyText){
@@ -32,4 +35,23 @@ function displayStory(storyText){
   choiceOne.setAttribute('id', 'continueButton');
   textField.appendChild(choiceOne);
   choiceOne.addEventListener('click', storyProgressFunction);
+}
+// function endOfGame(event){
+//   if(storyCounter < endingText.length - 1){
+//     storyCounter += 1;
+//     displayStory(endingText[storyCounter]);
+//   }
+// }
+function youWin(){
+  var textField = document.getElementsByClassName('textField')[0];
+  while (textField.hasChildNodes()) {
+    textField.removeChild(textField.lastChild);
+  };
+  var speakingField = document.createElement('h2');
+  textField.appendChild(speakingField);
+  var promptField = document.createElement('p');
+  promptField.innerText = 'You Won!';
+  promptField.setAttribute('class', 'gameOver');
+  promptField.addEventListener('click', resetGame);
+  textField.appendChild(promptField);
 }
