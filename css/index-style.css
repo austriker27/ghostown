@@ -8,3 +8,10 @@ body {
   background: #aa00ff;
   min-width: 900px;
 }
+
+#twitterBtn {
+  position: absolute;
+  top: 90%;
+  left: 0.5%;
+  z-index: 20;
+}
