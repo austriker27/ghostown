@@ -56,10 +56,12 @@ h2 {
 }
 
 p {
+  font-size: 1.2em;
   padding-left: 1em;
 }
 
 li {
+  font-size: 1.2em;
   float: left;
   padding: 0.5em;
   list-style-type: none;
@@ -130,9 +132,6 @@ li:hover {
   color: white;
   position: absolute;
   right: 20%;
-}
-
-.currentEnemyHp {
   padding-top: 0.5em;
   animation: newEnemyHP 0.5s forwards;
   animation-iteration-count: 1;
@@ -145,6 +144,6 @@ li:hover {
   100% {color: white;}
 }
 
-.continueButton {
-  left: 2em;
+#continueButton {
+  margin-left: 2em;
 }
