@@ -127,10 +127,31 @@ li:hover {
 .enemyHPBox {
   z-index: 1;
   font-family: 'Press Start 2P', cursive;
-  top: 10%;
+  top: 9%;
   text-align: center;
   color: white;
   position: absolute;
+  right: 20%;
+  padding-top: 0.5em;
+}
+
+.enemyHPBox {
+  z-index: 1;
+  font-family: 'Press Start 2P', cursive;
+  top: 8%;
+  text-align: center;
+  color: white;
+  position: absolute;
+  right: 20%;
+  padding-top: 0.5em;
+}
+
+
+.enemyHP {
+  z-index: 1;
+  font-family: 'Press Start 2P', cursive;
+  text-align: center;
+  color: white;
   right: 20%;
   padding-top: 0.5em;
   animation: newEnemyHP 0.5s forwards;
